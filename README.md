@@ -126,7 +126,7 @@ npx iconfont-taro
 # 使用
 在Page中使用图标
 ```jsx harmony
-import { Component } from '@tarojs/taro';
+import Taro, { Component } from '@tarojs/taro';
 import IconFont from '../iconfont';
 
 class App extends Component {
@@ -146,10 +146,10 @@ export default App;
 <IconFont name="alipay" color="red" />
 
 // 多色：红色+橘色
-<IconFont name="alipay" color="{{['red', 'orange']}}" size="300" />
+<IconFont name="alipay" color={['red', 'orange']} size={300} />
 
 // 不同格式的颜色写法
-<IconFont name="alipay" color="{{['#333', 'rgb(50, 124, 39)']}}" />
+<IconFont name="alipay" color={['#333', 'rgb(50, 124, 39)']} />
 ```
 
 # 更新图标
