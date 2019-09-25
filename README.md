@@ -99,11 +99,46 @@ npx iconfont-taro
 
 在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/fwh1990/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
 
+# Step 4
+部分文件Taro框架不会自动复制到dist目录，需要人工额外配置`config/index.js`文件。配置的规则详见[Taro的copy规则](https://nervjs.github.io/taro/docs/config-detail.html#copy)
+```json5
+{
+  copy: {
+    // 路径根据save_dir配置调整
+    patterns: [
+      {
+        from: 'src/components/iconfont/wechat/wechat.wxs',
+        to: 'dist/components/iconfont/wechat/',
+      },
+      {
+        from: 'src/components/iconfont/alipay/alipay.sjs',
+        to: 'dist/components/iconfont/alipay/',
+      },
+      {
+        from: 'src/components/iconfont/baidu/baidu.filter.js',
+        to: 'dist/components/iconfont/baidu/',
+      },
+    ],
+  },
+}
+```
+
 # 使用
-在page中使用图标
+在Page中使用图标
 ```jsx harmony
+import { Component } from '@tarojs/taro';
 import IconFont from '../iconfont';
 
+class App extends Component {
+  render() {
+    return <IconFont name="alipay" />;
+  }   
+}
+
+export default App;
+```
+更多用法：
+```jsx harmony
 // 原色彩
 <IconFont name="alipay" />
 
@@ -127,6 +162,7 @@ npx iconfont-taro
 # 扩展链接
 
 React-Native：[react-native-iconfont-cli](https://github.com/fwh1990/react-native-iconfont-cli)
+<br>
 小程序：[mini-program-iconfont-cli](https://github.com/fwh1990/mini-program-iconfont-cli)
 
 --------
