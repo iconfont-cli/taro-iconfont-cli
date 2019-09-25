@@ -19,7 +19,7 @@
 <br>
 4、支持自定义颜色
 <br>
-5/支持es6和typescript两种模式
+5、支持es6和typescript两种模式
 
 
 # Step 1
