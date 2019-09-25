@@ -1,0 +1,11 @@
+/* eslint-disable */
+
+interface Props {
+  name: '#names#';
+  size?: number;
+  color?: string | string[];
+}
+
+declare const IconFont: FunctionComponent<Props>;
+
+export = IconFont;
