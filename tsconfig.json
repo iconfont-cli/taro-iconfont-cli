@@ -28,5 +28,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
-  }
+  },
+  "exclude": [
+    "./snapshots/",
+    "./build/"
+  ]
 }

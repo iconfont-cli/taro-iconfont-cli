@@ -2,7 +2,7 @@
 import { FunctionComponent } from '@tarojs/taro';
 
 interface Props {
-  name: '#names#';
+  name: 'alipay' | 'user' | 'setup';
   size?: number;
   color?: string | string[];
 }

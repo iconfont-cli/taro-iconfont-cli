@@ -15,6 +15,11 @@ export const generateUsingComponent = (config: Config, names: string[], platform
 
   if (platform) {
     iconFile = replacePlatform(iconFile, platform);
+  } else if (!config.use_typescript) {
+    fs.writeFileSync(
+      path.join(saveDir, 'index.d.ts'),
+      replaceNames(getTemplate('index.d.ts'), names),
+    );
   }
 
   fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${TARO_PLATFORM[platform]}` : '') + jsxExtension), iconFile);

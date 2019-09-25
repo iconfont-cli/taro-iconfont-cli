@@ -1,0 +1,9 @@
+{
+  "symbol_url": "http://at.alicdn.com/t/font_1373348_ghk94ooopqr.js",
+  "use_typescript": true,
+  "platforms": "*",
+  "use_rpx": false,
+  "save_dir": "./snapshots/iconfont-ts",
+  "trim_icon_prefix": "icon",
+  "default_icon_size": 20
+}
