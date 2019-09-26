@@ -10,3 +10,7 @@ export const replaceSize = (content: string, size: number) => {
 export const replacePlatform = (content: string, platform: string) => {
   return content.replace(/#platform#/g, platform);
 };
+
+export const replaceRNSvg = (content: string) => {
+  return content.replace(/('react-native-svg)/, '$1/lib/commonjs');
+};

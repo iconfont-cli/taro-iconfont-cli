@@ -3,7 +3,7 @@
 
 import React, { FunctionComponent } from 'react';
 import { ViewProps } from 'react-native';
-import { Svg, GProps, Path } from 'react-native-svg';
+import { Svg, GProps, Path } from 'react-native-svg/lib/commonjs';
 
 
 export type IconNames = 'alipay' | 'user' | 'setup';
@@ -17,7 +17,7 @@ interface Props extends GProps, ViewProps {
 // If you don't want to make all icons in one file,
 // try to set generate_mode to "depends-on" in root file "iconfont.json".
 // And then regenerate icons by using cli command.
-const Icon: FunctionComponent<Props> = ({ color, name, size, ...rest }) => {
+const RNIcon: FunctionComponent<Props> = ({ color, name, size, ...rest }) => {
   switch (name) {
     case 'alipay':
       return (
@@ -100,7 +100,7 @@ const Icon: FunctionComponent<Props> = ({ color, name, size, ...rest }) => {
   return null;
 };
 
-Icon.defaultProps = {
+RNIcon.defaultProps = {
   size: 20,
 };
 
@@ -114,4 +114,4 @@ const getIconColor = (color: string | string[] | undefined, index: number, defau
     : defaultColor;
 };
 
-export default Icon;
+export default RNIcon;

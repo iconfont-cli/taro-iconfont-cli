@@ -5,7 +5,7 @@ import Taro, { FunctionComponent } from '@tarojs/taro';
 import Icon from './rn/Icon';
 
 interface Props {
-  name: 'alipay' | 'user' | 'setup';
+  name: '#names#';
   size?: number;
   color?: string | string[];
 }
@@ -17,7 +17,7 @@ const IconFont: FunctionComponent<Props> = (props) => {
 };
 
 IconFont.defaultProps = {
-  size: 20,
+  size: #size#,
 };
 
 export default IconFont;

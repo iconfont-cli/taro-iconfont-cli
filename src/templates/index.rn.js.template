@@ -10,7 +10,7 @@ const IconFont = (props) => {
 };
 
 IconFont.defaultProps = {
-  size: 14,
+  size: #size#,
 };
 
 export default IconFont;

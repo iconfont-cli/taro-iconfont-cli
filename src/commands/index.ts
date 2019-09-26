@@ -11,6 +11,7 @@ import { PLATFORM_MAP } from '../libs/maps';
 import { filterMiniProgramConfig, filterReactNativeConfig } from '../libs/filterConfig';
 import { generateUsingComponent } from '../libs/generateUsingComponent';
 import { getIconNames } from '../libs/getIconNames';
+import { replaceRNSvg } from '../libs/replace';
 
 const miniProgramBasePath = 'node_modules/mini-program-iconfont-cli';
 const reactNativeBasePath = 'node_modules/react-native-iconfont-cli';
@@ -59,8 +60,17 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/mini-program-iconfont-cli/, miniProgramDir);
       require(execFile)[execMethod](result, filterMiniProgramConfig(config, platform));
     } else {
+      const rnFilePath = path.resolve(config.save_dir, platform, 'RNIcon' + (config.use_typescript ? '.tsx' : '.js'));
+
       execFile = execFile.replace(/react-native-iconfont-cli/, reactNativeDir);
       require(execFile)[execMethod](result, filterReactNativeConfig(config, platform));
+      // FIXME: react-native-svg/lib/commonjs can not be found in taro.
+      // However, this package itself specifies a `main` module field that could not be resolved
+      // Indeed, none of these files exist
+      fs.writeFileSync(
+        rnFilePath,
+        replaceRNSvg(fs.readFileSync(rnFilePath ).toString())
+      );
     }
 
     generateUsingComponent(config, iconNames, platform);

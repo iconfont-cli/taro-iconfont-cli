@@ -1,13 +1,13 @@
 /* eslint-disable */
 
 import React from 'react';
-import { Svg, Path } from 'react-native-svg';
+import { Svg, Path } from 'react-native-svg/lib/commonjs';
 
 
 // If you don't want to make all icons in one file,
 // try to set generate_mode to "depends-on" in root file "iconfont.json".
 // And then regenerate icons by using cli command.
-const Icon = ({ color, name, size, ...rest }) => {
+const RNIcon = ({ color, name, size, ...rest }) => {
   switch (name) {
     case 'alipay':
       return (
@@ -90,7 +90,7 @@ const Icon = ({ color, name, size, ...rest }) => {
   return null;
 };
 
-Icon.defaultProps = {
+RNIcon.defaultProps = {
   size: 14,
 };
 
@@ -110,4 +110,4 @@ const getIconColor = (color, index, defaultColor) => {
     : defaultColor;
 };
 
-export default Icon;
+export default RNIcon;

@@ -9,7 +9,18 @@ export const generateUsingComponent = (config: Config, names: string[], platform
   const saveDir = path.resolve(config.save_dir);
   const jsxExtension = config.use_typescript ? '.tsx' : '.js';
 
-  let iconFile = getTemplate('index' + (platform ? `.platform` : '') + jsxExtension);
+  let iconFile: string;
+
+  if (platform) {
+    if (fs.existsSync(path.join(__dirname, '../templates/index.' + platform + jsxExtension + '.template'))) {
+      iconFile = getTemplate('index.' + platform + jsxExtension);
+    } else {
+      iconFile = getTemplate('index.platform' + jsxExtension);
+    }
+  } else {
+    iconFile = getTemplate('index' + jsxExtension);
+  }
+
   iconFile = replaceNames(iconFile, names);
   iconFile = replaceSize(iconFile, config.default_icon_size);
 
