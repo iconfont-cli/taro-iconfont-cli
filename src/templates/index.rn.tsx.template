@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 import Taro, { FunctionComponent } from '@tarojs/taro';
-import Icon from './rn/Icon';
+import Icon from './rn/RNIcon';
 
 interface Props {
   name: '#names#';
