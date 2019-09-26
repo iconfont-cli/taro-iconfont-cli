@@ -123,6 +123,39 @@ npx iconfont-taro
 }
 ```
 
+# Step 5
+如果您需要将Taro编译成`React-Native`的项目，那么请看完这一步，否则您可以直接忽略这一步
+
+----------
+
+在React-Native中，图标需要依赖`react-native-svg`，所以您需要在`taro`项目中安装这个插件
+```bash
+# Npm
+npm install react-native-svg
+
+# Yarn
+yarn add react-native-svg
+```
+
+接着，您需要在壳子中也安装这个插件，并做静态链接。
+
+官方推荐的壳子是：[NervJS/taro-native-shell](https://github.com/NervJS/taro-native-shell)，您可以查看仓库的README.md或者查看[官方文档](https://taro-docs.jd.com/taro/docs/react-native.html)了解更多壳子信息
+```bash
+# 在壳子`taro-native-shell`中或是你自定义的壳子
+
+# Npm or Yarn
+yarn add react-native-svg
+
+# Link android
+react-native link react-native-svg
+
+# Link ios
+cd ios && pod install && cd -
+
+```
+
+处理完后您就可以顺利地启动项目了。。。可能也不会太顺利，因为壳子`taro-native-shell`的版本比RN官方低很多，所以启动过程中碰到的问题也很多。
+
 # 使用
 在Page中使用图标
 ```jsx harmony
