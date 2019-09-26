@@ -7,6 +7,7 @@
 >- 微信小程序
 >- 支付宝小程序
 >- 百度小程序
+>- H5
 
 # 特性
 1、一键生成标准组件，多端支持
@@ -76,7 +77,7 @@ npx iconfont-init
 ```json5
 {
   // 选择你需要的平台
-  "platforms": ["wechat", "alipay", "baidu", "rn"]
+  "platforms": ["wechat", "alipay", "baidu", "rn", "h5"]
 }
 ```
 
