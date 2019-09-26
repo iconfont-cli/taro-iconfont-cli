@@ -3,6 +3,7 @@ export enum PLATFORM_MAP {
   alipay = 'mini-program-iconfont-cli/libs/generateAlipayComponent',
   baidu = 'mini-program-iconfont-cli/libs/generateBaiduComponent',
   rn = 'react-native-iconfont-cli/libs/generateComponent',
+  h5 = 'react-iconfont-cli/libs/generateComponent',
 }
 
 export enum TARO_PLATFORM {
@@ -10,4 +11,5 @@ export enum TARO_PLATFORM {
   alipay = 'alipay',
   baidu = 'swan',
   rn = 'rn',
+  h5 = 'h5',
 }

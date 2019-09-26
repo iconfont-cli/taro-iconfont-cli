@@ -15,7 +15,8 @@
     "colors": "^1.4.0",
     "mini-program-iconfont-cli": "^0.3.3",
     "mkdirp": "^0.5.1",
-    "react-native-iconfont-cli": "^1.5.0",
+    "react-iconfont-cli": "^0.0.1",
+    "react-native-iconfont-cli": "^1.6.0",
     "xml2js": "^0.4.22"
   },
   "devDependencies": {

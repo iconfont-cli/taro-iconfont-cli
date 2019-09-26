@@ -1,8 +1,6 @@
 # taro-iconfont-cli
 在Taro框架中使用iconfont图标，不依赖字体，支持多色彩。
 
-基于小程序版的[mini-program-iconfont-cli](https://github.com/fwh1990/mini-program-iconfont-cli)和RN版的[react-native-iconfont-cli](https://github.com/fwh1990/react-native-iconfont-cli)，你也可以在各自平台中单独使用它们。
-
 # 支持平台
 
 >- React-Native
@@ -20,6 +18,13 @@
 4、支持自定义颜色
 <br>
 5、支持es6和typescript两种模式
+
+# 扩展
+|平台|库|
+|----|---|
+|小程序|[mini-program-iconfont-cli](https://github.com/fwh1990/mini-program-iconfont-cli)|
+|React Native|[react-native-iconfont-cli](https://github.com/fwh1990/react-native-iconfont-cli)|
+|React 网页|[react-iconfont-cli](https://github.com/fwh1990/react-iconfont-cli)|
 
 
 # Step 1
@@ -89,7 +94,7 @@ npx iconfont-init
 我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值。
 
 # Step 3
-开始生成Taro组件
+开始生成Taro标准组件
 ```bash
 npx iconfont-taro
 ```
@@ -191,12 +196,6 @@ export default App;
 # 修改 symbol_url 配置后执行：
 npx iconfont-taro
 ```
-
-# 扩展链接
-
-React-Native：[react-native-iconfont-cli](https://github.com/fwh1990/react-native-iconfont-cli)
-<br>
-小程序：[mini-program-iconfont-cli](https://github.com/fwh1990/mini-program-iconfont-cli)
 
 --------
 
