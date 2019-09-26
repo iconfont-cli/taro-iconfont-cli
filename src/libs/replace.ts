@@ -11,6 +11,13 @@ export const replacePlatform = (content: string, platform: string) => {
   return content.replace(/#platform#/g, platform);
 };
 
-export const replaceRNSvg = (content: string) => {
-  return content.replace(/('react-native-svg)/, '$1/lib/commonjs');
+export const replaceRNIssue = (content: string) => {
+  return content
+    // FIXME: react-native-svg/lib/commonjs can not be found in taro.
+    // However, this package itself specifies a `main` module field that could not be resolved
+    // Indeed, none of these files exist
+    .replace(/('react-native-svg)/, '$1/lib/commonjs')
+    // Taro will inject React into file automatically.
+    .replace(/(import)\s+React(\s*,)/, '$1')
+    .replace(/import\s+React\s+from\s+'react';\n/, '');
 };
