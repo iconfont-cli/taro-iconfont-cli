@@ -105,27 +105,21 @@ npx iconfont-taro
 ```javascript
 {
   copy: {
-    // 路径根据save_dir配置调整
-    // 使用 process.env.TARO_ENV 可以有效防止每次都把不相关的平台文件也复制进去
     patterns: [
-      // 你的额外配置
-    ].concat({
-      weapp: {
-        // 微信小程序
-        from: `src/components/iconfont/weapp/weapp.wxs`,
-        to: `dist/components/iconfont/weapp/`,
-      },
-      alipay: {
-        // 支付宝小程序
-        from: `src/components/iconfont/alipay/alipay.sjs`,
-        to: `dist/components/iconfont/alipay/`,
-      },
-      swan: {
-        // 百度小程序
-        from: `src/components/iconfont/swan/swan.filter.js`,
-        to: `dist/components/iconfont/swan/`,
-      }
-    }[process.env.TARO_ENV] || []),
+      // 你自己的配置
+    ].concat((() => {
+      // 使用 process.env.TARO_ENV 可以有效防止每次都把不相关的平台文件也复制进去
+      const env = process.env.TARO_ENV;
+      const extension = { weapp: 'wxs', alipay: 'sjs', swan: 'filter.js' }[env];
+
+      return extension
+        ? {
+          // 路径根据save_dir配置调整
+          from: `src/components/iconfont/${env}/${env}.${extension}`,
+          to: `dist/components/iconfont/${env}/`,
+        }
+        : [];
+    })()),
   },
 }
 ```
