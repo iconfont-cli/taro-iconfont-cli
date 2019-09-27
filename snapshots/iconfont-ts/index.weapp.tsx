@@ -22,7 +22,7 @@ IconFont.defaultProps = {
 
 IconFont.config = {
   usingComponents: {
-    iconfont: './wechat/wechat',
+    iconfont: './weapp/weapp',
   },
 };
 

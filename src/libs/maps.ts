@@ -1,19 +1,9 @@
 export enum PLATFORM_MAP {
-  wechat = 'mini-program-iconfont-cli/libs/generateWechatComponent',
+  weapp = 'mini-program-iconfont-cli/libs/generateWechatComponent',
   alipay = 'mini-program-iconfont-cli/libs/generateAlipayComponent',
-  baidu = 'mini-program-iconfont-cli/libs/generateBaiduComponent',
+  swan = 'mini-program-iconfont-cli/libs/generateBaiduComponent',
   rn = 'react-native-iconfont-cli/libs/generateComponent',
   h5 = 'react-iconfont-cli/libs/generateComponent',
-  toutiao = 'mini-program-iconfont-cli/libs/generateToutiaoComponent',
+  tt = 'mini-program-iconfont-cli/libs/generateToutiaoComponent',
   qq = 'mini-program-iconfont-cli/libs/generateQqComponent',
-}
-
-export enum TARO_PLATFORM {
-  wechat = 'weapp',
-  alipay = 'alipay',
-  baidu = 'swan',
-  rn = 'rn',
-  h5 = 'h5',
-  toutiao = 'tt',
-  qq = 'qq',
 }

@@ -1,4 +1,4 @@
-<filter src="./baidu.filter.js" module="helper" />
+<filter src="./swan.filter.js" module="helper" />
 
 
 <!--alipay-->

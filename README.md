@@ -71,7 +71,8 @@ npx iconfont-init
 ```json5
 {
   // 选择你需要的平台
-  "platforms": ["wechat", "alipay", "baidu", "rn", "h5", "toutiao", "qq"]
+  // 说明 =>  weapp: 微信  |  swan: 百度  |  alipay: 支付宝  |  tt: 字节跳动
+  "platforms": ["weapp","swan" ,"alipay", "rn", "h5", "tt", "qq"]
 }
 ```
 
@@ -105,18 +106,22 @@ npx iconfont-taro
 {
   copy: {
     // 路径根据save_dir配置调整
+    // 使用 process.env.TARO_ENV 可以有效防止每次都把不相关的平台文件也复制进去
     patterns: [
       {
-        from: 'src/components/iconfont/wechat/wechat.wxs',
-        to: 'dist/components/iconfont/wechat/',
+        // 微信小程序
+        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.wxs',
+        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
       },
       {
-        from: 'src/components/iconfont/alipay/alipay.sjs',
-        to: 'dist/components/iconfont/alipay/',
+        // 支付宝小程序
+        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.sjs',
+        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
       },
       {
-        from: 'src/components/iconfont/baidu/baidu.filter.js',
-        to: 'dist/components/iconfont/baidu/',
+        // 百度小程序
+        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.filter.js',
+        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
       },
     ],
   },

@@ -22,7 +22,7 @@ IconFont.defaultProps = {
 
 IconFont.config = {
   usingComponents: {
-    iconfont: './toutiao/toutiao',
+    iconfont: './tt/tt',
   },
 };
 

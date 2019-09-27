@@ -1,4 +1,4 @@
-<wxs src="./wechat.wxs" module="helper" />
+<wxs src="./weapp.wxs" module="helper" />
 
 
 <!--alipay-->

@@ -3,7 +3,6 @@ import fs from 'fs';
 import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
 import { replaceNames, replacePlatform, replaceSize } from './replace';
-import { TARO_PLATFORM } from './maps';
 
 export const generateUsingComponent = (config: Config, names: string[], platform?: string) => {
   const saveDir = path.resolve(config.save_dir);
@@ -33,5 +32,5 @@ export const generateUsingComponent = (config: Config, names: string[], platform
     );
   }
 
-  fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${TARO_PLATFORM[platform]}` : '') + jsxExtension), iconFile);
+  fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${platform}` : '') + jsxExtension), iconFile);
 };

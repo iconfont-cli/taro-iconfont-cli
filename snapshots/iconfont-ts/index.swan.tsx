@@ -22,7 +22,7 @@ IconFont.defaultProps = {
 
 IconFont.config = {
   usingComponents: {
-    iconfont: './baidu/baidu',
+    iconfont: './swan/swan',
   },
 };
 
