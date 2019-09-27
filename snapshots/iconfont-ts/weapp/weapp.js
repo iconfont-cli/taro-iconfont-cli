@@ -7,21 +7,26 @@ Component({
     // string | string[]
     color: {
       type: null,
-      observer: function(color, originalColor) {
-        if (color !== originalColor) {
-          this.setData({
-            colors: this.fixColor()
-          });
-        }
+      observer: function() {
+        this.setData({
+          colors: this.fixColor()
+        });
       }
     },
     size: {
       type: Number,
       value: 20,
+      observer: function(size) {
+        this.setData({
+          svgSize: false ? size / 750 * wx.getSystemInfoSync().windowWidth : size,
+        });
+      },
     },
   },
   data: {
-    colors: ''
+    colors: '',
+    svgSize: false ? 20 / 750 * wx.getSystemInfoSync().windowWidth : 20,
+    quot: '"',
   },
   methods: {
     fixColor: function() {

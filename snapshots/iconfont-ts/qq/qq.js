@@ -7,20 +7,24 @@ Component({
     // string | string[]
     color: {
       type: null,
-      observer: function(color, originalColor) {
-        if (color !== originalColor) {
-          this.setData({
-            colorIsString: typeof color === 'string',
-          });
-        }
+      observer: function(color) {
+        this.setData({
+          colorIsString: typeof color === 'string',
+        });
       }
     },
     size: {
       type: Number,
       value: 20,
+      observer: function(size) {
+        this.setData({
+          svgSize: false ? size / 750 * qq.getSystemInfoSync().windowWidth : size,
+        });
+      },
     },
   },
   data: {
+    svgSize: false ? 20 / 750 * qq.getSystemInfoSync().windowWidth : 20,
     quot: '"',
     colorIsString: false,
   },
