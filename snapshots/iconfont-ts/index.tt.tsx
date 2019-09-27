@@ -2,7 +2,6 @@
 /* eslint-disable */
 
 import Taro, { FunctionComponent } from '@tarojs/taro';
-import Icon from './h5/H5Icon';
 
 interface Props {
   name: 'alipay' | 'user' | 'setup';
@@ -13,11 +12,18 @@ interface Props {
 const IconFont: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
-  return <Icon name={name} size={size} color={color} />;
+  // @ts-ignore
+  return <iconfont name={name} size={size} color={color} />;
 };
 
 IconFont.defaultProps = {
   size: 20,
+};
+
+IconFont.config = {
+  usingComponents: {
+    iconfont: './toutiao/toutiao',
+  },
 };
 
 export default IconFont;

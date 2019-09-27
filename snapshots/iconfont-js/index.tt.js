@@ -1,16 +1,21 @@
 /* eslint-disable */
 
 import Taro from '@tarojs/taro';
-import Icon from './h5/H5Icon';
 
 const IconFont = (props) => {
   const { name, size, color } = props;
 
-  return <Icon name={name} size={size} color={color} />;
+  return <iconfont name={name} size={size} color={color} />;
 };
 
 IconFont.defaultProps = {
   size: 14,
+};
+
+IconFont.config = {
+  usingComponents: {
+    iconfont: './toutiao/toutiao',
+  },
 };
 
 export default IconFont;
