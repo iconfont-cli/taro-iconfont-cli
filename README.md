@@ -102,28 +102,30 @@ npx iconfont-taro
 
 # Step 4
 部分文件Taro框架不会自动复制到dist目录，需要人工额外配置`config/index.js`文件。配置的规则详见[Taro的copy规则](https://nervjs.github.io/taro/docs/config-detail.html#copy)
-```json5
+```javascript
 {
   copy: {
     // 路径根据save_dir配置调整
     // 使用 process.env.TARO_ENV 可以有效防止每次都把不相关的平台文件也复制进去
     patterns: [
-      {
+      // 你的额外配置
+    ].concat({
+      weapp: {
         // 微信小程序
-        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.wxs',
-        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
+        from: `src/components/iconfont/weapp/weapp.wxs`,
+        to: `dist/components/iconfont/weapp/`,
       },
-      {
+      alipay: {
         // 支付宝小程序
-        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.sjs',
-        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
+        from: `src/components/iconfont/alipay/alipay.sjs`,
+        to: `dist/components/iconfont/alipay/`,
       },
-      {
+      swan: {
         // 百度小程序
-        from: 'src/components/iconfont/${process.env.TARO_ENV}/${process.env.TARO_ENV}.filter.js',
-        to: 'dist/components/iconfont/${process.env.TARO_ENV}/',
-      },
-    ],
+        from: `src/components/iconfont/swan/swan.filter.js`,
+        to: `dist/components/iconfont/swan/`,
+      }
+    }[process.env.TARO_ENV] || []),
   },
 }
 ```
