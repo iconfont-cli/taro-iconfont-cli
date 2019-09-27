@@ -5,6 +5,7 @@ export enum PLATFORM_MAP {
   rn = 'react-native-iconfont-cli/libs/generateComponent',
   h5 = 'react-iconfont-cli/libs/generateComponent',
   toutiao = 'mini-program-iconfont-cli/libs/generateToutiaoComponent',
+  qq = 'mini-program-iconfont-cli/libs/generateQqComponent',
 }
 
 export enum TARO_PLATFORM {
@@ -14,4 +15,5 @@ export enum TARO_PLATFORM {
   rn = 'rn',
   h5 = 'h5',
   toutiao = 'tt',
+  qq = 'qq',
 }

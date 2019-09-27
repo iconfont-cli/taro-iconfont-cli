@@ -8,6 +8,7 @@
 >- 支付宝小程序
 >- 百度小程序
 >- 头条小程序
+>- QQ小程序
 >- H5
 
 # 特性
@@ -70,7 +71,7 @@ npx iconfont-init
 ```json5
 {
   // 选择你需要的平台
-  "platforms": ["wechat", "alipay", "baidu", "rn", "h5", "toutiao"]
+  "platforms": ["wechat", "alipay", "baidu", "rn", "h5", "toutiao", "qq"]
 }
 ```
 
