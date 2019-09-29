@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
-import { replaceNames, replacePlatform, replaceSize } from './replace';
+import { replaceIsRpx, replaceNames, replacePlatform, replaceSize } from './replace';
 
 export const generateUsingComponent = (config: Config, names: string[], platform?: string) => {
   const saveDir = path.resolve(config.save_dir);
@@ -22,6 +22,7 @@ export const generateUsingComponent = (config: Config, names: string[], platform
 
   iconFile = replaceNames(iconFile, names);
   iconFile = replaceSize(iconFile, config.default_icon_size);
+  iconFile = replaceIsRpx(iconFile, config.use_rpx);
 
   if (platform) {
     iconFile = replacePlatform(iconFile, platform);

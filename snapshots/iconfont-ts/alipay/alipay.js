@@ -9,22 +9,35 @@ Component({
   data: {
     quot: '"',
     svgSize: 20,
+    isStr: true,
   },
   didMount() {
     const size = this.props.size;
+    const color = this.props.color;
+
+    this.setData({
+      isStr: typeof color === 'string',
+    });
 
     if (size !== this.data.svgSize) {
       this.setData({
-        svgSize: false ? size / 750 * my.getSystemInfoSync().windowWidth : size
+        svgSize: size,
       });
     }
   },
   disUpdate(prevProps) {
     const size = this.props.size;
+    const color = this.props.color;
+
+    if (color !== prevProps.color) {
+      this.setData({
+        isStr: typeof color === 'string',
+      });
+    }
 
     if (size !== prevProps.size) {
       this.setData({
-        svgSize: false ? size / 750 * my.getSystemInfoSync().windowWidth : size,
+        svgSize: size,
       });
     }
   },

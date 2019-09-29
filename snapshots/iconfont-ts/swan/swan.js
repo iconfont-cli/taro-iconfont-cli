@@ -8,19 +8,25 @@ Component({
     color: {
       type: null,
       value: '',
+      observer: function(color) {
+        this.setData({
+          isStr: typeof color === 'string',
+        });
+      }
     },
     size: {
       type: Number,
       value: 20,
       observer: function(size) {
         this.setData({
-          svgSize: false ? size / 750 * swan.getSystemInfoSync().windowWidth : size,
+          svgSize: size,
         });
       },
     },
   },
   data: {
     quot: '"',
-    svgSize: false ? 20 / 750 * swan.getSystemInfoSync().windowWidth : 20,
+    svgSize: 20,
+    isStr: true,
   },
 });

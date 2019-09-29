@@ -101,30 +101,6 @@ npx iconfont-taro
 在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/fwh1990/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
 
 # Step 4
-部分文件Taro框架不会自动复制到dist目录，需要人工额外配置`config/index.js`文件。配置的规则详见[Taro的copy规则](https://nervjs.github.io/taro/docs/config-detail.html#copy)
-```javascript
-{
-  copy: {
-    patterns: [
-      // 你自己的配置
-    ].concat((() => {
-      // 使用 process.env.TARO_ENV 可以有效防止每次都把不相关的平台文件也复制进去
-      const env = process.env.TARO_ENV;
-      const extension = { weapp: 'wxs', alipay: 'sjs', swan: 'filter.js' }[env];
-
-      return extension
-        ? {
-          // 路径根据save_dir配置调整
-          from: `src/components/iconfont/${env}/${env}.${extension}`,
-          to: `dist/components/iconfont/${env}/`,
-        }
-        : [];
-    })()),
-  },
-}
-```
-
-# Step 5
 如果您需要将Taro编译成`React-Native`的项目，那么请看完这一步，否则您可以直接忽略这一步
 
 ----------
@@ -184,6 +160,13 @@ export default App;
 
 // 不同格式的颜色写法
 <IconFont name="alipay" color={['#333', 'rgb(50, 124, 39)']} />
+
+
+// 与文字对齐
+<View style={{ display: 'flex', alignItems: 'center' }}>
+  <Text>Hello</text>
+  <IconFont name="alipay" />
+</View>
 ```
 
 # 更新图标

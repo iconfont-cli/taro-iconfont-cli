@@ -25,3 +25,9 @@ export const replaceDuplicateReact = (content: string) => {
     .replace(/(import)\s+React(\s*,)/, '$1')
     .replace(/import\s+React\s+from\s+'react';\n/, '')
 };
+
+export const replaceIsRpx = (content: string, useRpx: boolean) => {
+  return content
+    .replace(/#rpx-1:(.+?):#/g, useRpx ? '$1' : '')
+    .replace(/#rpx-0:(.+?):#/g, useRpx ? '' : '$1');
+};

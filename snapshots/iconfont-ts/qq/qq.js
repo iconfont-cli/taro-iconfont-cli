@@ -9,7 +9,7 @@ Component({
       type: null,
       observer: function(color) {
         this.setData({
-          colorIsString: typeof color === 'string',
+          isStr: typeof color === 'string',
         });
       }
     },
@@ -18,14 +18,14 @@ Component({
       value: 20,
       observer: function(size) {
         this.setData({
-          svgSize: false ? size / 750 * qq.getSystemInfoSync().windowWidth : size,
+          svgSize: size,
         });
       },
     },
   },
   data: {
-    svgSize: false ? 20 / 750 * qq.getSystemInfoSync().windowWidth : 20,
+    svgSize: 20,
     quot: '"',
-    colorIsString: false,
+    isStr: true,
   },
 });

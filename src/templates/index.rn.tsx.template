@@ -13,7 +13,7 @@ interface Props {
 const IconFont: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
-  return <Icon name={name} size={size} color={color} />;
+  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
 };
 
 IconFont.defaultProps = {

@@ -7,9 +7,10 @@ Component({
     // string | string[]
     color: {
       type: null,
-      observer: function() {
+      observer: function(color) {
         this.setData({
-          colors: this.fixColor()
+          colors: this.fixColor(),
+          isStr: typeof color === 'string',
         });
       }
     },
@@ -18,15 +19,16 @@ Component({
       value: 20,
       observer: function(size) {
         this.setData({
-          svgSize: false ? size / 750 * wx.getSystemInfoSync().windowWidth : size,
+          svgSize: size,
         });
       },
     },
   },
   data: {
     colors: '',
-    svgSize: false ? 20 / 750 * wx.getSystemInfoSync().windowWidth : 20,
+    svgSize: 20,
     quot: '"',
+    isStr: true,
   },
   methods: {
     fixColor: function() {
