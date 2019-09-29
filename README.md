@@ -45,7 +45,7 @@ npx iconfont-init
   "save_dir": "./iconfont",
   "use_typescript": false,
   "platforms": "*",
-  "use_rpx": false,
+  "use_rpx": true,
   "trim_icon_prefix": "icon",
   "default_icon_size": 18
 }
@@ -77,11 +77,7 @@ npx iconfont-init
 ```
 
 ### use_rpx
-是否使用[尺寸单位rpx](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html#%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D)还是普通的像素单位`px`。默认值为false，即使用`px`
-
-------
-
-**注意：** `H5`和`RN`平台暂时不支持`rpx`格式。
+是否使用[尺寸单位rpx](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html#%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D)还是普通的像素单位`px`。默认值为true，与Taro保持一致的缩放。您也可以设置为false，强制使用`px`
 
 ### trim_icon_prefix
 如果你的图标有通用的前缀，而你在使用的时候又不想重复去写，那么可以通过这种配置这个选项把前缀统一去掉。
