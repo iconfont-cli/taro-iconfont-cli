@@ -1,3 +1,6 @@
+# 1.0.3
+[fix] 兼容 node v8.5.0 以下的版本
+
 # 1.0.2
 
 [enhance] 不需要再额外配置`copy.patterns`到文件`config/index.js`中
