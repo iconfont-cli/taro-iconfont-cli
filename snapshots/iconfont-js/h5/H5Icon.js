@@ -6,8 +6,8 @@ const DEFAULT_STYLE = {
   display: 'block',
 };
 
-const H5Icon = ({ color, name, size, style, ...rest }) => {
-  style = style ? { ...DEFAULT_STYLE, ...style } : DEFAULT_STYLE;
+const H5Icon = ({ color, name, size, style: _style, ...rest }) => {
+  const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE;
 
   switch (name) {
     case 'alipay':
