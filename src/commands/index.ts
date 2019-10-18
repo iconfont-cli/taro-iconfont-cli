@@ -13,17 +13,18 @@ import { generateUsingComponent } from '../libs/generateUsingComponent';
 import { getIconNames } from '../libs/getIconNames';
 import { replaceDuplicateReact, replaceRNSvg } from '../libs/replace';
 
+const basePath = path.join(__dirname, '..');
 const miniProgramBasePath = 'node_modules/mini-program-iconfont-cli';
 const reactNativeBasePath = 'node_modules/react-native-iconfont-cli';
 const reactWebBasePath = 'node_modules/react-iconfont-cli';
-const miniProgramDir = fs.existsSync(path.join(__dirname, miniProgramBasePath))
-  ? path.join(__dirname, miniProgramBasePath)
+const miniProgramDir = fs.existsSync(path.join(basePath, miniProgramBasePath))
+  ? path.join(basePath, miniProgramBasePath)
   : path.resolve(miniProgramBasePath);
-const reactNativeDir = fs.existsSync(path.join(__dirname, reactNativeBasePath))
-  ? path.join(__dirname, reactNativeBasePath)
+const reactNativeDir = fs.existsSync(path.join(basePath, reactNativeBasePath))
+  ? path.join(basePath, reactNativeBasePath)
   : path.resolve(reactNativeBasePath);
-const reactWebDir = fs.existsSync(path.join(__dirname, reactWebBasePath))
-  ? path.join(__dirname, reactWebBasePath)
+const reactWebDir = fs.existsSync(path.join(basePath, reactWebBasePath))
+  ? path.join(basePath, reactWebBasePath)
   : path.resolve(reactWebBasePath);
 
 const config = getConfig();
@@ -55,6 +56,8 @@ fetchXml(config.symbol_url).then((result) => {
       console.warn(`\nThe platform ${colors.red(platform)} is not exist.\n`);
       return;
     }
+
+    execFile = path.join(...execFile.split('/'));
 
     console.log(`\nCreating icons for platform ${colors.green(platform)}\n`);
 
