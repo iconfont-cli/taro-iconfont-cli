@@ -2,7 +2,7 @@
 
 import Taro from '@tarojs/taro';
 
-const IconFont = (props) => {
+export const IconFont = (props) => {
   const { name, size, color } = props;
 
   return <iconfont name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;

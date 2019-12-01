@@ -6,7 +6,7 @@ const DEFAULT_STYLE = {
   display: 'block',
 };
 
-const H5Icon = ({ color, name, size, style: _style, ...rest }) => {
+export const H5Icon = ({ color, name, size, style: _style, ...rest }) => {
   const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE;
 
   switch (name) {

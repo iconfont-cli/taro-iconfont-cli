@@ -18,7 +18,7 @@ const DEFAULT_STYLE: CSSProperties = {
   display: 'block',
 };
 
-const H5Icon: FunctionComponent<Props> = ({ color, name, size, style: _style, ...rest }) => {
+export const H5Icon: FunctionComponent<Props> = ({ color, name, size, style: _style, ...rest }) => {
   const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE;
 
   switch (name) {
