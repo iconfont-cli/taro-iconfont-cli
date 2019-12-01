@@ -1,5 +1,5 @@
-export const IconFont = () => {
+export const JsIcon = () => {
   return null;
 };
 
-export default IconFont;
+export default JsIcon;

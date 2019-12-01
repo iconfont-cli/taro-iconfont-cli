@@ -2,20 +2,20 @@
 
 import Taro from '@tarojs/taro';
 
-export const IconFont = (props) => {
+export const JsIcon = (props) => {
   const { name, size, color } = props;
 
   return <iconfont name={name} size={parseFloat(Taro.pxTransform(size))} color={color} />;
 };
 
-IconFont.defaultProps = {
+JsIcon.defaultProps = {
   size: 14,
 };
 
-IconFont.config = {
+JsIcon.config = {
   usingComponents: {
     iconfont: './alipay/alipay',
   },
 };
 
-export default IconFont;
+export default JsIcon;

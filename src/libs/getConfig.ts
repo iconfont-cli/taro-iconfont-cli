@@ -12,6 +12,7 @@ export interface Config {
   use_rpx: boolean;
   trim_icon_prefix: string;
   default_icon_size: number;
+  component_name: string;
 }
 
 let cacheConfig: Config;
@@ -51,6 +52,7 @@ export const getConfig = () => {
 
   config.save_dir = config.save_dir || defaultConfig.save_dir;
   config.default_icon_size = config.default_icon_size || defaultConfig.default_icon_size;
+  config.component_name = config.component_name || defaultConfig.component_name;
 
   cacheConfig = config;
 

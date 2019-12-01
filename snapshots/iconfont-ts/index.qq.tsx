@@ -9,21 +9,21 @@ interface Props {
   color?: string | string[];
 }
 
-export const IconFont: FunctionComponent<Props> = (props) => {
+export const TsxIcon: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
   // @ts-ignore
   return <iconfont name={name} size={size} color={color} />;
 };
 
-IconFont.defaultProps = {
+TsxIcon.defaultProps = {
   size: 20,
 };
 
-IconFont.config = {
+TsxIcon.config = {
   usingComponents: {
     iconfont: './qq/qq',
   },
 };
 
-export default IconFont;
+export default TsxIcon;

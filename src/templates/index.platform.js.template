@@ -2,20 +2,20 @@
 
 import Taro from '@tarojs/taro';
 
-export const IconFont = (props) => {
+export const #SummaryIcon# = (props) => {
   const { name, size, color } = props;
 
   return <iconfont name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
 };
 
-IconFont.defaultProps = {
+#SummaryIcon#.defaultProps = {
   size: #size#,
 };
 
-IconFont.config = {
+#SummaryIcon#.config = {
   usingComponents: {
     iconfont: './#platform#/#platform#',
   },
 };
 
-export default IconFont;
+export default #SummaryIcon#;

@@ -3,14 +3,14 @@
 import Taro from '@tarojs/taro';
 import Icon from './rn/RNIcon';
 
-export const IconFont = (props) => {
+export const JsIcon = (props) => {
   const { name, size, color } = props;
 
   return <Icon name={name} size={parseFloat(Taro.pxTransform(size))} color={color} />;
 };
 
-IconFont.defaultProps = {
+JsIcon.defaultProps = {
   size: 14,
 };
 
-export default IconFont;
+export default JsIcon;

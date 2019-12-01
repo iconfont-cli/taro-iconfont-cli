@@ -7,6 +7,6 @@ interface Props {
   color?: string | string[];
 }
 
-export declare const IconFont: FunctionComponent<Props>;
+export declare const JsIcon: FunctionComponent<Props>;
 
-export default IconFont;
+export default JsIcon;

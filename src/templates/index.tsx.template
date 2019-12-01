@@ -9,8 +9,8 @@ interface Props {
   color?: string | string[];
 }
 
-export const IconFont: FunctionComponent<Props> = () => {
+export const #SummaryIcon#: FunctionComponent<Props> = () => {
   return null;
 };
 
-export default IconFont;
+export default #SummaryIcon#;

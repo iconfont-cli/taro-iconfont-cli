@@ -9,21 +9,21 @@ interface Props {
   color?: string | string[];
 }
 
-export const IconFont: FunctionComponent<Props> = (props) => {
+export const #SummaryIcon#: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
   // @ts-ignore
   return <iconfont name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
 };
 
-IconFont.defaultProps = {
+#SummaryIcon#.defaultProps = {
   size: #size#,
 };
 
-IconFont.config = {
+#SummaryIcon#.config = {
   usingComponents: {
     iconfont: './#platform#/#platform#',
   },
 };
 
-export default IconFont;
+export default #SummaryIcon#;
