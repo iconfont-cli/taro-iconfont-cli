@@ -6,7 +6,7 @@ import glob from 'glob';
 import colors from 'colors';
 import mkdirp from 'mkdirp';
 import { getConfig } from '../libs/getConfig';
-import { fetchXml } from '../libs/fetchXml';
+import { fetchXml } from 'iconfont-parser';
 import { PLATFORM_MAP } from '../libs/maps';
 import { filterMiniProgramConfig, filterReactNativeConfig, filterReactWebConfig } from '../libs/filterConfig';
 import { generateUsingComponent } from '../libs/generateUsingComponent';

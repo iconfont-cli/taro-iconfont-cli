@@ -1,4 +1,4 @@
-import { XmlData } from './fetchXml';
+import { XmlData } from 'iconfont-parser';
 import { Config } from './getConfig';
 
 export const getIconNames = (data: XmlData, config: Config) => {
