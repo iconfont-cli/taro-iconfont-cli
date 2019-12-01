@@ -1,3 +1,8 @@
+# 1.1.0
+[feat] 配置增加`component_name`，可配置导出的组件名称
+<br>
+[feat] 组件新增导出实际模块名，`export { xxx } from 'yyy'`
+
 # 1.0.5
 [fix] 修复使用npm安装时生成组件失败的问题
 
