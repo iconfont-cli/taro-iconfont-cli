@@ -71,11 +71,12 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/react-native-iconfont-cli/, reactNativeDir);
       require(execFile)[execMethod](result, filterReactNativeConfig(config, platform));
 
-      const rnFilePath = path.resolve(config.save_dir, platform, 'RNIcon' + jsxExtension);
-      fs.writeFileSync(
-        rnFilePath,
-        replaceRNSvg(replaceDuplicateReact(fs.readFileSync(rnFilePath).toString()))
-      );
+      glob.sync(path.resolve(config.save_dir, platform, '*.{js,tsx}')).map((rnFilePath) => {
+        fs.writeFileSync(
+          rnFilePath,
+          replaceRNSvg(replaceDuplicateReact(fs.readFileSync(rnFilePath).toString()))
+        );
+      });
     } else {
       execFile = execFile.replace(/react-iconfont-cli/, reactWebDir);
       require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
