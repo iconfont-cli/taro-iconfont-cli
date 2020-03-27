@@ -62,7 +62,6 @@ fetchXml(config.symbol_url).then((result) => {
     console.log(`\nCreating icons for platform ${colors.green(platform)}\n`);
 
     const execMethod = path.basename(execFile);
-    const jsxExtension = config.use_typescript ? '.tsx' : '.js';
 
     if (execFile.indexOf('mini-program-iconfont-cli') >= 0) {
       execFile = execFile.replace(/mini-program-iconfont-cli/, miniProgramDir);
@@ -81,11 +80,12 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/react-iconfont-cli/, reactWebDir);
       require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
 
-      const h5FilePath = path.resolve(config.save_dir, platform, 'H5Icon' + jsxExtension);
-      fs.writeFileSync(
-        h5FilePath,
-        replaceDuplicateReact(fs.readFileSync(h5FilePath).toString())
-      );
+      glob.sync(path.resolve(config.save_dir, platform, '*.{js,tsx}')).map((h5FilePath) => {
+        fs.writeFileSync(
+          h5FilePath,
+          replaceDuplicateReact(fs.readFileSync(h5FilePath).toString())
+        );
+      });
     }
 
     generateUsingComponent(config, iconNames, platform);

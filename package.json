@@ -1,6 +1,6 @@
 {
   "name": "taro-iconfont-cli",
-  "version": "1.1.0",
+  "version": "1.1.1-rc.0",
   "main": "index.js",
   "repository": "git@github.com:fwh1990/taro-iconfont-cli.git",
   "author": "范文华 <531362022@qq.com>",
@@ -16,7 +16,7 @@
     "iconfont-parser": "^1.0.0",
     "mini-program-iconfont-cli": "0.5.5",
     "mkdirp": "^0.5.1",
-    "react-iconfont-cli": "0.2.2",
+    "react-iconfont-cli": "1.0.0",
     "react-native-iconfont-cli": "1.7.0"
   },
   "devDependencies": {
