@@ -1,3 +1,8 @@
+# 1.1.1
+[fix] 修复h5在js模式下没有默认字号问题
+[chore] 升级包 react-native-iconfont-cli 和 react-iconfont-cli
+[chore] 锁定部分deps的版本号
+
 # 1.1.0
 [feat] 配置增加`component_name`，可配置导出的组件名称
 <br>
