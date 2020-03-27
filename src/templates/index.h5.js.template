@@ -9,4 +9,8 @@ export const #SummaryIcon# = (props) => {
   return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
 };
 
+#SummaryIcon#.defaultProps = {
+  size: #size#,
+};
+
 export default #SummaryIcon#;
