@@ -3146,7 +3146,7 @@ mimic-fn@^2.0.0:
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-mini-program-iconfont-cli@^0.5.5:
+mini-program-iconfont-cli@0.5.5:
   version "0.5.5"
   resolved "https://registry.npmjs.org/mini-program-iconfont-cli/-/mini-program-iconfont-cli-0.5.5.tgz#6752c2efdf5a51d81ccb8868884c65dfd7231588"
   integrity sha512-iIExmzdEJg1BP9R04wUTnP10zJPlrd0KoScdPjhqBRhlqjjLZ5iLMj6/VkFJXwduRoK3VGoAwEwHAzU4M57xtw==
@@ -3772,7 +3772,7 @@ react-devtools-core@^3.6.3:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-iconfont-cli@^0.2.2:
+react-iconfont-cli@0.2.2:
   version "0.2.2"
   resolved "https://registry.npmjs.org/react-iconfont-cli/-/react-iconfont-cli-0.2.2.tgz#f7bcd52999fb842d8bce1cd51c2ff9a6922cd557"
   integrity sha512-kKSxeDKU1k8DLDRroV6yOTsgLvz072/L+UBv4TKHIPLXwRdplvz8J8oFhnElBSUr75nZy2YBJzPGZ0O75XctOg==
@@ -3792,7 +3792,7 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
-react-native-iconfont-cli@^1.7.0:
+react-native-iconfont-cli@1.7.0:
   version "1.7.0"
   resolved "https://registry.npmjs.org/react-native-iconfont-cli/-/react-native-iconfont-cli-1.7.0.tgz#552007a234929eadef2abcef3627b61e528f9b3e"
   integrity sha512-Lergj+FIGwvLrJhL8AHTe8wLLYwDmzFZsJOcXGTs8Uq4wqmoHUbWohXTpQRsUWvBBH0psDRm/b8TrW4VbCyDHw==
