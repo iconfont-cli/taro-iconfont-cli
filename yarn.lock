@@ -3772,10 +3772,10 @@ react-devtools-core@^3.6.3:
     shell-quote "^1.6.1"
     ws "^3.3.1"
 
-react-iconfont-cli@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/react-iconfont-cli/-/react-iconfont-cli-1.0.0.tgz#0f5e2db433290f5c3e8f58b0cb58ebb0fee73041"
-  integrity sha512-hxQ/JHa207wUjtBIo0xXU6vEfZjSMWqUlN0NFURI5L6eDg9IO+TQ0JjaZ1RmFjOADXuOD3yoqaBVcPidHrbHcQ==
+react-iconfont-cli@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/react-iconfont-cli/-/react-iconfont-cli-1.0.1.tgz#51bfa666838202dd7c8b0ea93345a070831c8308"
+  integrity sha512-HNZlzQwrfvX7cSrZIVee7yx8tXBTc6By5kBkZQ917AOfwQamxd+wbBKQEcnBiyoWQJlq7JEd1TKp6uxpJr2aWg==
   dependencies:
     colors "^1.3.3"
     glob "^7.1.4"
@@ -3790,10 +3790,10 @@ react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
 
-react-native-iconfont-cli@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.npmjs.org/react-native-iconfont-cli/-/react-native-iconfont-cli-1.7.0.tgz#552007a234929eadef2abcef3627b61e528f9b3e"
-  integrity sha512-Lergj+FIGwvLrJhL8AHTe8wLLYwDmzFZsJOcXGTs8Uq4wqmoHUbWohXTpQRsUWvBBH0psDRm/b8TrW4VbCyDHw==
+react-native-iconfont-cli@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.npmjs.org/react-native-iconfont-cli/-/react-native-iconfont-cli-1.7.1.tgz#15aa5f84bbda6a21756dab0a3e9575478c20b165"
+  integrity sha512-lce+JGuAV1atqmImyCDAVH9ilMXlaJhE8PhZhbBPIOG2QYTc9LCdrvjqWqh6kWjywt7H3wYqhCb6kl7OKZuDvQ==
   dependencies:
     colors "^1.3.3"
     glob "^7.1.4"

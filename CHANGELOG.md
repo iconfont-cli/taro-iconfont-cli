@@ -1,3 +1,7 @@
+# 1.1.2
+[chore] 升级包 react-native-iconfont-cli
+[chore] 升级包 react-iconfont-cli
+
 # 1.1.1
 [fix] 修复h5在js模式下没有默认字号问题
 [chore] 升级包 react-native-iconfont-cli 和 react-iconfont-cli
