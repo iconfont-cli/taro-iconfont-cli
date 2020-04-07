@@ -1,14 +1,18 @@
 # 1.2.0
 [feat] npx iconfont-init 增加 `--output` 选项，可传入配置输出路径，默认为 iconfont.json
+<br>
 [feat] npx iconfont-taro 增加 `--config` 选项，可传入配置文件路径，默认为 iconfont.json
 
 # 1.1.2
 [chore] 升级包 react-native-iconfont-cli
+<br>
 [chore] 升级包 react-iconfont-cli
 
 # 1.1.1
 [fix] 修复h5在js模式下没有默认字号问题
+<br>
 [chore] 升级包 react-native-iconfont-cli 和 react-iconfont-cli
+<br>
 [chore] 锁定部分deps的版本号
 
 # 1.1.0
