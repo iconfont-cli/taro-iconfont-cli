@@ -1,3 +1,7 @@
+# 1.2.0
+[feat] npx iconfont-init 增加 `--output` 选项，可传入配置输出路径，默认为 iconfont.json
+[feat] npx iconfont-taro 增加 `--config` 选项，可传入配置文件路径，默认为 iconfont.json
+
 # 1.1.2
 [chore] 升级包 react-native-iconfont-cli
 [chore] 升级包 react-iconfont-cli
