@@ -6,7 +6,7 @@ console.log([
   '',
   'Usage:',
   '',
-  '    ' + colors.green('npx iconfont-init') + '     : generate config file',
-  '    ' + colors.green('npx iconfont-taro') + '   : generate icon component',
+  '    ' + colors.green.bold('npx iconfont-init [--output]') + '     : Generate configuration file, default file name is iconfont.json',
+  '    ' + colors.green.bold('npx iconfont-taro [--config]') + '     : Generate icon component',
   '',
 ].join('\n'));

@@ -37,6 +37,9 @@ npm install taro-iconfont-cli --save-dev
 生成配置文件
 ```bash
 npx iconfont-init
+
+# 可传入配置输出路径
+# npx iconfont-init --output iconfont.json
 ```
 此时项目根目录会生成一个`iconfont.json`的文件，内容如下：
 ```json
@@ -94,6 +97,9 @@ npx iconfont-init
 开始生成Taro标准组件
 ```bash
 npx iconfont-taro
+
+# 可传入配置文件路径
+# npx iconfont-taro --config iconfont.json
 ```
 生成后查看您设置的保存目录中是否含有所有的图标
 

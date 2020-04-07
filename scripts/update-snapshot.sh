@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
-cp -f ./scripts/config/iconfont-js.json ./iconfont.json
-npx ts-node src/commands/index.ts
-
-cp -f ./scripts/config/iconfont-ts.json ./iconfont.json
-npx ts-node src/commands/index.ts
+npx ts-node src/commands/index.ts --config ./scripts/config/iconfont-js.json
+npx ts-node src/commands/index.ts --config ./scripts/config/iconfont-ts.json
