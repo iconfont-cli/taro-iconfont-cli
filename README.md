@@ -105,7 +105,7 @@ npx iconfont-taro
 
 -------
 
-在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/fwh1990/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
+在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/iconfont-cli/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
 
 # Step 4
 如果您需要将Taro编译成`React-Native`的项目，那么请看完这一步，否则您可以直接忽略这一步
