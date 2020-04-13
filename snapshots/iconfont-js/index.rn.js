@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import Taro from '@tarojs/taro';
-import Icon from './rn/RNIcon';
+import Icon from './rn';
 
 export const JsIcon = (props) => {
   const { name, size, color } = props;

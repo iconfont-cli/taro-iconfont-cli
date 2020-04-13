@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import Taro from '@tarojs/taro';
-import Icon from './h5/H5Icon';
+import Icon from './h5';
 
 export const JsIcon = (props) => {
   const { name, size, color } = props;

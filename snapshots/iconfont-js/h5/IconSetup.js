@@ -6,7 +6,7 @@ const DEFAULT_STYLE = {
   display: 'block',
 };
 
-export const IconSetup = ({ size, color, style: _style, ...rest }) => {
+const IconSetup = ({ size, color, style: _style, ...rest }) => {
   const style = _style ? { ...DEFAULT_STYLE, ..._style } : DEFAULT_STYLE;
 
   return (

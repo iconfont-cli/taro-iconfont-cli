@@ -5,7 +5,7 @@ import IconAlipay from './IconAlipay';
 import IconUser from './IconUser';
 import IconSetup from './IconSetup';
 
-export const RNIcon = ({ name, ...rest }) => {
+const IconFont = ({ name, ...rest }) => {
   switch (name) {
     case 'alipay':
       return <IconAlipay {...rest} />;
@@ -18,4 +18,4 @@ export const RNIcon = ({ name, ...rest }) => {
   return null;
 };
 
-export default RNIcon;
+export default IconFont;

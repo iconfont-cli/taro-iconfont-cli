@@ -2,7 +2,7 @@
 /* eslint-disable */
 
 import Taro, { FunctionComponent } from '@tarojs/taro';
-import Icon from './h5/H5Icon';
+import Icon from './h5';
 
 interface Props {
   name: 'alipay' | 'user' | 'setup';

@@ -18,7 +18,6 @@ export const filterReactNativeConfig = (config: Config, platform: string) => {
     save_dir: path.join(config.save_dir, platform),
     trim_icon_prefix: config.trim_icon_prefix,
     default_icon_size: config.default_icon_size,
-    summary_component_name: 'RNIcon',
   };
 };
 
@@ -29,7 +28,6 @@ export const filterReactWebConfig = (config: Config, platform: string) => {
     save_dir: path.join(config.save_dir, platform),
     trim_icon_prefix: config.trim_icon_prefix,
     default_icon_size: config.default_icon_size,
-    summary_component_name: 'H5Icon',
     unit: config.use_rpx ? 'rem' : 'px',
   };
 };

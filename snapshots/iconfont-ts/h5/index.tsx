@@ -16,7 +16,7 @@ interface Props extends DOMAttributes<SVGElement> {
   className?: string;
 }
 
-export const H5Icon: FunctionComponent<Props> = ({ name, ...rest }) => {
+const IconFont: FunctionComponent<Props> = ({ name, ...rest }) => {
   switch (name) {
     case 'alipay':
       return <IconAlipay {...rest} />;
@@ -30,4 +30,4 @@ export const H5Icon: FunctionComponent<Props> = ({ name, ...rest }) => {
   return null;
 };
 
-export default H5Icon;
+export default IconFont;

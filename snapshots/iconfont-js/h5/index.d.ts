@@ -10,6 +10,6 @@ interface Props extends DOMAttributes<SVGElement> {
   className?: string;
 }
 
-export declare const H5Icon: FunctionComponent<Props>;
+declare const IconFont: FunctionComponent<Props>;
 
-export default H5Icon;
+export default IconFont;

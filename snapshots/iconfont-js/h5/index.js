@@ -4,7 +4,7 @@ import IconAlipay from './IconAlipay';
 import IconUser from './IconUser';
 import IconSetup from './IconSetup';
 
-export const H5Icon = ({ name, ...rest }) => {
+const IconFont = ({ name, ...rest }) => {
   switch (name) {
     case 'alipay':
       return <IconAlipay {...rest} />;
@@ -18,4 +18,4 @@ export const H5Icon = ({ name, ...rest }) => {
   return null;
 };
 
-export default H5Icon;
+export default IconFont;

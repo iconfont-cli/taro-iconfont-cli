@@ -11,6 +11,6 @@ interface Props extends GProps, ViewProps {
   color?: string | string[];
 }
 
-export declare const RNIcon: FunctionComponent<Props>;
+declare const IconFont: FunctionComponent<Props>;
 
-export default RNIcon;
+export default IconFont;
