@@ -50,8 +50,7 @@ npx iconfont-init
   "platforms": "*",
   "use_rpx": true,
   "trim_icon_prefix": "icon",
-  "default_icon_size": 18,
-  "componnent_name": "IconFont"
+  "default_icon_size": 18
 }
 ```
 ### 配置参数说明：
@@ -76,7 +75,7 @@ npx iconfont-init
 {
   // 选择你需要的平台
   // 说明 =>  weapp: 微信  |  swan: 百度  |  alipay: 支付宝  |  tt: 字节跳动
-  "platforms": ["weapp","swan" ,"alipay", "rn", "h5", "tt", "qq"]
+  "platforms": ["weapp", "swan", "alipay", "rn", "h5", "tt", "qq"]
 }
 ```
 
@@ -88,9 +87,6 @@ npx iconfont-init
 
 ### default_icon_size
 我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值。
-
-### component_name
-就是组件的名称，默认名称为`IconFont`，您也可以改成`Icons`或者您喜欢的名字。记住，它是一个变量名，您必须遵守Javascript中关于变量的语法规则。以及作为组件名，请尽量以大写字母开头。
 
 
 # Step 3
