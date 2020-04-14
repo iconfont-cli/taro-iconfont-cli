@@ -1,3 +1,10 @@
+# 2.0.0
+**[breaking]** 移除属性 `component_name`，一律使用 IconFont 作为组件名称
+<br>
+**[breaking]** 不再导出模块的名字，一律使用 `export default XXX`
+<br>
+[chore] 升级包 react-native-iconfont-cli 和 react-iconfont-cli
+
 # 1.2.0
 [feat] npx iconfont-init 增加 `--output` 选项，可传入配置输出路径，默认为 iconfont.json
 <br>
