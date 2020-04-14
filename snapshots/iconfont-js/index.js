@@ -1,4 +1,4 @@
-export const IconFont = () => {
+const IconFont = () => {
   return null;
 };
 

@@ -9,7 +9,7 @@ interface Props {
   color?: string | string[];
 }
 
-export const IconFont: FunctionComponent<Props> = () => {
+const IconFont: FunctionComponent<Props> = () => {
   return null;
 };
 
