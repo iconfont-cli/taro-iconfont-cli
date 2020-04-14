@@ -2,20 +2,20 @@
 
 import Taro from '@tarojs/taro';
 
-export const JsIcon = (props) => {
+export const IconFont = (props) => {
   const { name, size, color } = props;
 
   return <iconfont name={name} size={parseFloat(Taro.pxTransform(size))} color={color} />;
 };
 
-JsIcon.defaultProps = {
+IconFont.defaultProps = {
   size: 14,
 };
 
-JsIcon.config = {
+IconFont.config = {
   usingComponents: {
     iconfont: './swan/swan',
   },
 };
 
-export default JsIcon;
+export default IconFont;

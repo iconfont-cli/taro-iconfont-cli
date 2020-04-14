@@ -9,8 +9,8 @@ interface Props {
   color?: string | string[];
 }
 
-export const TsxIcon: FunctionComponent<Props> = () => {
+export const IconFont: FunctionComponent<Props> = () => {
   return null;
 };
 
-export default TsxIcon;
+export default IconFont;

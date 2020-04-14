@@ -31,7 +31,3 @@ export const replaceIsRpx = (content: string, useRpx: boolean) => {
     .replace(/#rpx-1:(.+?):#/g, useRpx ? '$1' : '')
     .replace(/#rpx-0:(.+?):#/g, useRpx ? '' : '$1');
 };
-
-export const replaceSummaryIcon = (content: string, iconName: string) => {
-  return content.replace(/#SummaryIcon#/g, iconName);
-};

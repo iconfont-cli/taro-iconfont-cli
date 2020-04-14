@@ -10,14 +10,14 @@ interface Props {
   color?: string | string[];
 }
 
-export const TsxIcon: FunctionComponent<Props> = (props) => {
+export const IconFont: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
   return <Icon name={name} size={size} color={color} />;
 };
 
-TsxIcon.defaultProps = {
+IconFont.defaultProps = {
   size: 20,
 };
 
-export default TsxIcon;
+export default IconFont;
