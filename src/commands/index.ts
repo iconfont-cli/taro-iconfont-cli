@@ -76,6 +76,10 @@ fetchXml(config.symbol_url).then((result) => {
           replaceDuplicateReact(fs.readFileSync(rnFilePath).toString())
         );
       });
+      // Remove .d.ts files
+      glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((rnFilePath) => {
+        fs.unlinkSync(rnFilePath);
+      });
     } else {
       execFile = execFile.replace(/react-iconfont-cli/, reactWebDir);
       require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
@@ -85,6 +89,10 @@ fetchXml(config.symbol_url).then((result) => {
           h5FilePath,
           replaceDuplicateReact(fs.readFileSync(h5FilePath).toString())
         );
+      });
+      // Remove .d.ts files
+      glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((h5FilePath) => {
+        fs.unlinkSync(h5FilePath);
       });
     }
 
