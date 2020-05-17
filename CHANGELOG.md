@@ -1,3 +1,8 @@
+# 2.1.0
+[feat] 删除 h5 和 rn 的用不上的类型定义文件
+<br>
+[fix] 修复rn场景下，多个库同时引用`react-native-svg`时app会报错的问题
+
 # 2.0.0
 **[breaking]** 移除属性 `component_name`，一律使用 IconFont 作为组件名称
 <br>
