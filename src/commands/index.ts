@@ -11,7 +11,7 @@ import { PLATFORM_MAP } from '../libs/maps';
 import { filterMiniProgramConfig, filterReactNativeConfig, filterReactWebConfig } from '../libs/filterConfig';
 import { generateUsingComponent } from '../libs/generateUsingComponent';
 import { getIconNames } from '../libs/getIconNames';
-import { replaceDuplicateReact, replaceRNSvg } from '../libs/replace';
+import { replaceDuplicateReact } from '../libs/replace';
 
 const basePath = path.join(__dirname, '..');
 const miniProgramBasePath = 'node_modules/mini-program-iconfont-cli';
@@ -73,7 +73,7 @@ fetchXml(config.symbol_url).then((result) => {
       glob.sync(path.resolve(config.save_dir, platform, '*.{js,tsx}')).map((rnFilePath) => {
         fs.writeFileSync(
           rnFilePath,
-          replaceRNSvg(replaceDuplicateReact(fs.readFileSync(rnFilePath).toString()))
+          replaceDuplicateReact(fs.readFileSync(rnFilePath).toString())
         );
       });
     } else {

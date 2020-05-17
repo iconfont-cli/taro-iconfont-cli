@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import { Svg, Path } from 'react-native-svg/lib/commonjs';
+import { Svg, Path } from 'react-native-svg';
 import { getIconColor } from './helper';
 
 const IconSetup = ({ size, color, ...rest }) => {

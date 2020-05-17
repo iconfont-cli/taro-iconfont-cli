@@ -3,7 +3,7 @@
 
 import { FunctionComponent } from 'react';
 import { ViewProps } from 'react-native';
-import { Svg, GProps, Path } from 'react-native-svg/lib/commonjs';
+import { Svg, GProps, Path } from 'react-native-svg';
 import { getIconColor } from './helper';
 
 interface Props extends GProps, ViewProps {
