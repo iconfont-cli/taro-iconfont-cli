@@ -1,6 +1,6 @@
 /* tslint:disable */
 /* eslint-disable */
-
+import React from 'react';
 import Taro, { FunctionComponent } from '@tarojs/taro';
 
 interface Props {
