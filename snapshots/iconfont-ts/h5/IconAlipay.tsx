@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
+import React, { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
 import { getIconColor } from './helper';
 
 interface Props extends DOMAttributes<SVGElement> {

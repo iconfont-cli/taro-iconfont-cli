@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { ViewProps } from 'react-native';
 import { GProps } from 'react-native-svg';
 import IconAlipay from './IconAlipay';

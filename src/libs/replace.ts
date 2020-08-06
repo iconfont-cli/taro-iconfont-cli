@@ -11,12 +11,12 @@ export const replacePlatform = (content: string, platform: string) => {
   return content.replace(/#platform#/g, platform);
 };
 
-export const replaceDuplicateReact = (content: string) => {
-  return content
-    // Taro will inject React into file automatically.
-    .replace(/(import)\s+React(\s*,)/, '$1')
-    .replace(/import\s+React\s+from\s+'react';\n/, '')
-};
+// export const replaceDuplicateReact = (content: string) => {
+//   return content
+//     // Taro will inject React into file automatically.
+//     .replace(/(import)\s+React(\s*,)/, '$1')
+//     .replace(/import\s+React\s+from\s+'react';\n/, '')
+// };
 
 export const replaceIsRpx = (content: string, useRpx: boolean) => {
   return content

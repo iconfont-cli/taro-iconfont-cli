@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+import React from 'react';
 import IconAlipay from './IconAlipay';
 import IconUser from './IconUser';
 import IconSetup from './IconSetup';
