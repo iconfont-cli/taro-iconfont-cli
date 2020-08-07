@@ -17,12 +17,12 @@ export interface Config {
 
 let cacheConfig: Config;
 
-export const getConfig = () => {
+export const getConfig = (argv?: string[]) => {
   if (cacheConfig) {
     return cacheConfig;
   }
 
-  const args = minimist<{ config: string }>(process.argv.slice(2));
+  const args = minimist<{ config: string }>(argv || process.argv.slice(2));
   let configFilePath = 'iconfont.json';
 
   if (args.config && typeof args.config === 'string') {

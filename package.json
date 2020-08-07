@@ -1,6 +1,6 @@
 {
   "name": "taro-iconfont-cli",
-  "version": "2.1.0",
+  "version": "3.0.0-alpha.4",
   "main": "index.js",
   "repository": "git@github.com:iconfont-cli/taro-iconfont-cli.git",
   "author": "范文华 <531362022@qq.com>",
@@ -9,6 +9,9 @@
     "iconfont": "./commands/help.js",
     "iconfont-init": "./commands/createJson.js",
     "iconfont-taro": "./commands/index.js"
+  },
+  "peerDependencies": {
+    "@tarojs/taro": "^3.0.0"
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -21,7 +24,8 @@
     "react-native-iconfont-cli": "2.0.0"
   },
   "devDependencies": {
-    "@tarojs/taro": "^1.3.19",
+    "@tarojs/service": "^3.0.7",
+    "@tarojs/taro": "^3.0.5",
     "@types/fs-extra": "^8.0.0",
     "@types/glob": "^7.1.1",
     "@types/minimist": "^1.2.0",
@@ -29,6 +33,8 @@
     "@types/node": "^12.7.7",
     "@types/react": "^16.9.3",
     "@types/react-native": "^0.60.15",
+    "@types/webpack": "^4.41.21",
+    "@types/webpack-dev-server": "^3.11.0",
     "react": "^16.9.0",
     "react-native": "^0.61.0",
     "react-native-svg": "^9.9.4",

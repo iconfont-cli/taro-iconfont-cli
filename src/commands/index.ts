@@ -11,7 +11,6 @@ import { PLATFORM_MAP } from '../libs/maps';
 import { filterMiniProgramConfig, filterReactNativeConfig, filterReactWebConfig } from '../libs/filterConfig';
 import { generateUsingComponent } from '../libs/generateUsingComponent';
 import { getIconNames } from '../libs/getIconNames';
-import { replaceDuplicateReact } from '../libs/replace';
 
 const basePath = path.join(__dirname, '..');
 const miniProgramBasePath = 'node_modules/mini-program-iconfont-cli';
@@ -70,12 +69,6 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/react-native-iconfont-cli/, reactNativeDir);
       require(execFile)[execMethod](result, filterReactNativeConfig(config, platform));
 
-      glob.sync(path.resolve(config.save_dir, platform, '*.{js,tsx}')).map((rnFilePath) => {
-        fs.writeFileSync(
-          rnFilePath,
-          replaceDuplicateReact(fs.readFileSync(rnFilePath).toString())
-        );
-      });
       // Remove .d.ts files
       glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((rnFilePath) => {
         fs.unlinkSync(rnFilePath);
@@ -84,12 +77,6 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/react-iconfont-cli/, reactWebDir);
       require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
 
-      glob.sync(path.resolve(config.save_dir, platform, '*.{js,tsx}')).map((h5FilePath) => {
-        fs.writeFileSync(
-          h5FilePath,
-          replaceDuplicateReact(fs.readFileSync(h5FilePath).toString())
-        );
-      });
       // Remove .d.ts files
       glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((h5FilePath) => {
         fs.unlinkSync(h5FilePath);

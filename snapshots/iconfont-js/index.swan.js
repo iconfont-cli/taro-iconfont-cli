@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+import React from 'react';
 import Taro from '@tarojs/taro';
 
 const IconFont = (props) => {
@@ -10,12 +11,6 @@ const IconFont = (props) => {
 
 IconFont.defaultProps = {
   size: 14,
-};
-
-IconFont.config = {
-  usingComponents: {
-    iconfont: './swan/swan',
-  },
 };
 
 export default IconFont;

@@ -1,7 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import Taro, { FunctionComponent } from '@tarojs/taro';
+import React, { FunctionComponent } from 'react';
+
 
 interface Props {
   name: 'alipay' | 'user' | 'setup';
@@ -18,12 +19,6 @@ const IconFont: FunctionComponent<Props> = (props) => {
 
 IconFont.defaultProps = {
   size: 20,
-};
-
-IconFont.config = {
-  usingComponents: {
-    iconfont: './qq/qq',
-  },
 };
 
 export default IconFont;

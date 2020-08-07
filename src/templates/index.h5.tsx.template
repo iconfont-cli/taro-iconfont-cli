@@ -1,7 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import Taro, { FunctionComponent } from '@tarojs/taro';
+import React, { FunctionComponent } from 'react';
+#rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './h5';
 
 interface Props {
@@ -13,7 +14,7 @@ interface Props {
 const IconFont: FunctionComponent<Props> = (props) => {
   const { name, size, color } = props;
 
-  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
+  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size, 750)):##rpx-0:size:#} color={color} />;
 };
 
 IconFont.defaultProps = {

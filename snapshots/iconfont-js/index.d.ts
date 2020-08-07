@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { FunctionComponent } from '@tarojs/taro';
+import { FunctionComponent } from 'react';
 
 interface Props {
   name: 'alipay' | 'user' | 'setup';

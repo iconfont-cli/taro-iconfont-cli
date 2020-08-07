@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-import Taro from '@tarojs/taro';
+import React from 'react';
+#rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './rn';
 
 const IconFont = (props) => {

@@ -1,6 +1,7 @@
 /* eslint-disable */
 
-import Taro from '@tarojs/taro';
+import React from 'react';
+#rpx-1:import Taro from '@tarojs/taro';:#
 
 const IconFont = (props) => {
   const { name, size, color } = props;
@@ -10,12 +11,6 @@ const IconFont = (props) => {
 
 IconFont.defaultProps = {
   size: #size#,
-};
-
-IconFont.config = {
-  usingComponents: {
-    iconfont: './#platform#/#platform#',
-  },
 };
 
 export default IconFont;

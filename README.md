@@ -3,7 +3,6 @@
 
 # 支持平台
 
-* React-Native
 * 微信小程序
 * 支付宝小程序
 * 百度小程序
@@ -24,12 +23,15 @@
 
 # Step 1
 安装插件
+
+**如果您使用Taro2.x，请安装 `taro-iconfont-cli@2.1.0`，并阅读旧版的[README.md](https://github.com/iconfont-cli/taro-iconfont-cli/blob/v2.1.0/README.md)**
+
 ```bash
 # Yarn
-yarn add taro-iconfont-cli --dev
+yarn add taro-iconfont-cli@next --dev
 
 # Npm
-npm install taro-iconfont-cli --save-dev
+npm install taro-iconfont-cli@next --save-dev
 ```
 
 
@@ -75,7 +77,7 @@ npx iconfont-init
 {
   // 选择你需要的平台
   // 说明 =>  weapp: 微信  |  swan: 百度  |  alipay: 支付宝  |  tt: 字节跳动
-  "platforms": ["weapp", "swan", "alipay", "rn", "h5", "tt", "qq"]
+  "platforms": ["weapp", "swan", "alipay", "h5", "tt", "qq"]
 }
 ```
 
@@ -104,37 +106,17 @@ npx iconfont-taro
 在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/iconfont-cli/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
 
 # Step 4
-如果您需要将Taro编译成`React-Native`的项目，那么请看完这一步，否则您可以直接忽略这一步
+由于Taro3.0的架构变更，`usingComponents`现在必须手动指定，所以您需要在各自page的`index.config.js`里加入iconfont。
+```typescript
+// pages/*/index.config.js
+import { useIconFont } from '../../components/helper';
 
-----------
-
-在React-Native中，图标需要依赖`react-native-svg`，所以您需要在`taro`项目中安装这个插件
-```bash
-# Npm
-npm install react-native-svg
-
-# Yarn
-yarn add react-native-svg
+export default {
+  usingComponents: Object.assign(useIconFont()),
+}
 ```
 
-接着，您需要在壳子中也安装这个插件，并做静态链接。
-
-官方推荐的壳子是：[NervJS/taro-native-shell](https://github.com/NervJS/taro-native-shell)，您可以查看仓库的README.md或者查看[官方文档](https://taro-docs.jd.com/taro/docs/react-native.html)了解更多壳子信息
-```bash
-# 在壳子`taro-native-shell`中或是你自定义的壳子
-
-# Npm or Yarn
-yarn add react-native-svg
-
-# Link android
-react-native link react-native-svg
-
-# Link ios
-cd ios && pod install && cd -
-
-```
-
-处理完后您就可以顺利地启动项目了。。。可能也不会太顺利，因为壳子`taro-native-shell`的版本比RN官方低很多，所以启动过程中碰到的问题也很多。
+当官方issue https://github.com/NervJS/taro/issues/7098 被解决时，您只需在根目录`src/app.config.ts`下填写一次`usingComponents`而无需在各个pages下重复填写。同时当前库会由next转到latest。
 
 # 使用
 在Page中使用图标

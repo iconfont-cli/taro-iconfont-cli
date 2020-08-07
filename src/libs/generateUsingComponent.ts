@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
-import { replaceIsRpx, replaceNames, replacePlatform, replaceSize } from './replace';
+import { replaceIsRpx, replaceNames, replacePlatform, replaceSize, replaceRelativePath } from './replace';
 
 export const generateUsingComponent = (config: Config, names: string[], platform?: string) => {
   const saveDir = path.resolve(config.save_dir);
@@ -34,6 +34,12 @@ export const generateUsingComponent = (config: Config, names: string[], platform
     definitionFile = replaceNames(definitionFile, names);
     fs.writeFileSync(path.join(saveDir, 'index.d.ts'), definitionFile);
   }
+
+  // index.config.ts only support commonJs
+  let helperFile = getTemplate('helper.js');
+  helperFile = replaceRelativePath(helperFile, config.save_dir);
+  fs.writeFileSync(path.join(saveDir, 'helper.js'), helperFile);
+  fs.writeFileSync(path.join(saveDir, 'helper.d.ts'), getTemplate('helper.d.ts'));
 
   fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${platform}` : '') + jsxExtension), iconFile);
 };

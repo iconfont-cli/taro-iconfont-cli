@@ -1,5 +1,6 @@
 /* eslint-disable */
 
+import React from 'react';
 import { getIconColor } from './helper';
 
 const DEFAULT_STYLE = {

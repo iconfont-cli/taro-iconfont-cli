@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
+import React, { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
 import IconAlipay from './IconAlipay';
 import IconUser from './IconUser';
 import IconSetup from './IconSetup';
