@@ -116,7 +116,9 @@ export default {
 }
 ```
 
-当官方issue https://github.com/NervJS/taro/issues/7098 被解决时，您只需在根目录`src/app.config.ts`下填写一次`usingComponents`而无需在各个pages下重复填写。同时当前库会由next转到latest。
+当官方issue https://github.com/NervJS/taro/issues/7098 被解决时，您只需在根目录`src/app.config.ts`下填写一次`usingComponents`而无需在各个pages下重复填写。
+
+当官方issue https://github.com/NervJS/taro/issues/7274 被解决时，您不需要再写`usingComponents`，整个Step 4文档将被删除。同时当前库会由next转到latest。
 
 # 使用
 在Page中使用图标
