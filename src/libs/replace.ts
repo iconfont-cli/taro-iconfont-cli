@@ -1,4 +1,4 @@
-import { getComponentPath as getRelativePath } from './getComponentPath';
+import path from 'path';
 
 export const replaceNames = (content: string, names: string[]) => {
   return content.replace(/#names#/g, names.join(`' | '`));
@@ -19,5 +19,6 @@ export const replaceIsRpx = (content: string, useRpx: boolean) => {
 };
 
 export const replaceRelativePath = (content: string, saveDir: string) => {
-  return content.replace(/#relativePath#/g, getRelativePath(saveDir));
+  const relativePath = path.relative(path.resolve('src'), path.resolve(saveDir));
+  return content.replace(/#relativePath#/g, relativePath);
 };

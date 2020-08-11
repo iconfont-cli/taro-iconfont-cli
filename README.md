@@ -106,24 +106,22 @@ npx iconfont-taro
 在生成代码之前，你可以顺便参考[snapshots目录](https://github.com/iconfont-cli/taro-iconfont-cli/tree/master/snapshots)自动生成的快照文件。
 
 # Step 4
-由于Taro3.0的架构变更，`usingComponents`现在必须手动指定，所以您需要在各自page的`index.config.js`里加入iconfont。
+由于Taro3.0的架构变更，您需要在`src/app.config.js`下填写一次`usingComponents`。
 ```typescript
-// pages/*/index.config.js
-import { useIconFont } from '../../components/helper';
+// src/app.config.js
+import { useGlobalIconFont } from '../../components/helper';
 
 export default {
-  usingComponents: Object.assign(useIconFont()),
+  usingComponents: Object.assign(useGlobalIconFont()),
 }
 ```
 
-当官方issue https://github.com/NervJS/taro/issues/7098 被解决时，您只需在根目录`src/app.config.ts`下填写一次`usingComponents`而无需在各个pages下重复填写。
-
-当官方issue https://github.com/NervJS/taro/issues/7274 被解决时，您不需要再写`usingComponents`，整个Step 4文档将被删除。同时当前库会由next转到latest。
+这并不是一个多好的方案，毕竟还需要开发者关注这个细节。也许能用webpack的plugin解决或者等官方推出更好的方案，有任何更好的idea欢迎提供。
 
 # 使用
 在Page中使用图标
 ```jsx harmony
-import Taro, { Component } from '@tarojs/taro';
+import React, { Component } from 'react';
 import IconFont from '../iconfont';
 
 class App extends Component {

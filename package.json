@@ -1,6 +1,6 @@
 {
   "name": "taro-iconfont-cli",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-rc.0",
   "main": "index.js",
   "repository": "git@github.com:iconfont-cli/taro-iconfont-cli.git",
   "author": "范文华 <531362022@qq.com>",
@@ -11,7 +11,7 @@
     "iconfont-taro": "./commands/index.js"
   },
   "peerDependencies": {
-    "@tarojs/taro": "^3.0.0"
+    "@tarojs/taro": "^3.0.8"
   },
   "dependencies": {
     "colors": "^1.4.0",
