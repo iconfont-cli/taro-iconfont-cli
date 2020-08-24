@@ -109,7 +109,7 @@ npx iconfont-taro
 由于Taro3.0的架构变更，您需要在`src/app.config.js`下填写一次`usingComponents`。
 ```typescript
 // src/app.config.js
-import { useGlobalIconFont } from '../../components/iconfont/helper';
+import { useGlobalIconFont } from './components/iconfont/helper';
 
 export default {
   usingComponents: Object.assign(useGlobalIconFont()),
