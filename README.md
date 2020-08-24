@@ -28,10 +28,10 @@
 
 ```bash
 # Yarn
-yarn add taro-iconfont-cli@next --dev
+yarn add taro-iconfont-cli --dev
 
 # Npm
-npm install taro-iconfont-cli@next --save-dev
+npm install taro-iconfont-cli --save-dev
 ```
 
 
