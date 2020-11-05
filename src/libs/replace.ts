@@ -18,6 +18,11 @@ export const replaceIsRpx = (content: string, useRpx: boolean) => {
     .replace(/#rpx-0:(.+?):#/g, useRpx ? '' : '$1');
 };
 
+export const replaceDesignWidth = (content: string, designWidth) => {
+  return content
+    .replace(/#designWidth#/g, designWidth)
+};
+
 export const replaceRelativePath = (content: string, saveDir: string) => {
   const relativePath = path.relative(path.resolve('src'), path.resolve(saveDir));
   return content.replace(/#relativePath#/g, relativePath);

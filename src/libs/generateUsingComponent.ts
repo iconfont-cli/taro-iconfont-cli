@@ -2,7 +2,14 @@ import path from 'path';
 import fs from 'fs';
 import { Config } from './getConfig';
 import { getTemplate } from './getTemplate';
-import { replaceIsRpx, replaceNames, replacePlatform, replaceSize, replaceRelativePath } from './replace';
+import {
+  replaceIsRpx,
+  replaceNames,
+  replacePlatform,
+  replaceSize,
+  replaceRelativePath,
+  replaceDesignWidth,
+} from './replace';
 
 export const generateUsingComponent = (config: Config, names: string[], platform?: string) => {
   const saveDir = path.resolve(config.save_dir);
@@ -22,6 +29,12 @@ export const generateUsingComponent = (config: Config, names: string[], platform
 
   iconFile = replaceNames(iconFile, names);
   iconFile = replaceSize(iconFile, config.default_icon_size);
+
+  if(platform === 'h5' && config.use_rpx) {
+    let designWidth = config.design_width || 750
+    iconFile = replaceDesignWidth(iconFile, designWidth);
+  }
+
   iconFile = replaceIsRpx(iconFile, config.use_rpx);
 
   if (platform) {
