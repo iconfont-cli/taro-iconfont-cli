@@ -11,6 +11,7 @@ export interface Config {
   use_typescript: boolean;
   platforms: string[];
   use_rpx: boolean;
+  design_width: string | number;
   trim_icon_prefix: string;
   default_icon_size: number;
 }
