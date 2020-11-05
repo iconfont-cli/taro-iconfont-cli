@@ -52,7 +52,8 @@ npx iconfont-init
   "platforms": "*",
   "use_rpx": true,
   "trim_icon_prefix": "icon",
-  "default_icon_size": 18
+  "default_icon_size": 18,
+  "design_width": 750
 }
 ```
 ### 配置参数说明：
@@ -83,6 +84,9 @@ npx iconfont-init
 
 ### use_rpx
 是否使用[尺寸单位rpx](https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html#%E5%B0%BA%E5%AF%B8%E5%8D%95%E4%BD%8D)还是普通的像素单位`px`。默认值为true，与Taro保持一致的缩放。您也可以设置为false，强制使用`px`
+
+### design_width
+若 `use_rpx: true` 且当前设计图尺寸不为 750 时，可以通过修改这个字段来修改设计尺寸。
 
 ### trim_icon_prefix
 如果你的图标有通用的前缀，而你在使用的时候又不想重复去写，那么可以通过这种配置这个选项把前缀统一去掉。
