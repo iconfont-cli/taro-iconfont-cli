@@ -24,6 +24,9 @@ export const replaceDesignWidth = (content: string, designWidth) => {
 };
 
 export const replaceRelativePath = (content: string, saveDir: string) => {
-  const relativePath = path.relative(path.resolve('src'), path.resolve(saveDir));
+  const relativePath = path
+    .relative(path.resolve('src'), path.resolve(saveDir))
+    // To resolve the path separator on windows
+    .replace('\\', '/');
   return content.replace(/#relativePath#/g, relativePath);
 };
