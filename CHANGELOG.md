@@ -1,3 +1,6 @@
+# 3.1.1
+[fix] 修复`useGlobalIconFont`中的路径在windows系统上使用了反斜杆的问题
+
 # 3.1.0
 [feat] 新增属性 `design_width` 以适配h5场景下的设计尺寸
 
