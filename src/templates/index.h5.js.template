@@ -5,9 +5,9 @@ import React from 'react';
 import Icon from './h5';
 
 const IconFont = (props) => {
-  const { name, size, color } = props;
+  const { name, size, color, style } = props;
 
-  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size, #designWidth#)):##rpx-0:size:#} color={color} />;
+  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size, #designWidth#)):##rpx-0:size:#} color={color} style={style} />;
 };
 
 IconFont.defaultProps = {

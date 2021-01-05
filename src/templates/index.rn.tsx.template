@@ -5,16 +5,17 @@ import React, { FunctionComponent } from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './rn';
 
-interface Props {
+export interface Props {
   name: '#names#';
   size?: number;
   color?: string | string[];
+  style?: React.CSSProperties;
 }
 
 const IconFont: FunctionComponent<Props> = (props) => {
-  const { name, size, color } = props;
+  const { name, size, color, style } = props;
 
-  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} />;
+  return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} style={style} />;
 };
 
 IconFont.defaultProps = {
