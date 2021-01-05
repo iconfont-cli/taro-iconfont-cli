@@ -1,1 +1,1 @@
-export declare const useGlobalIconFont: () => { iconfont: string };
+export declare var useGlobalIconFont: () => { iconfont: string };
