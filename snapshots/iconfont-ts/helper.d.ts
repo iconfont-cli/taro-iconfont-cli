@@ -1,1 +1,2 @@
-export declare const useGlobalIconFont: () => { iconfont: string };
+/* eslint-disable */
+export declare var useGlobalIconFont: () => { iconfont: string };
