@@ -1,3 +1,6 @@
+# 3.1.2
+[fix] 修复eslint可能会报错的问题
+
 # 3.1.1
 [fix] 修复`useGlobalIconFont`中的路径在windows系统上使用了反斜杆的问题
 
