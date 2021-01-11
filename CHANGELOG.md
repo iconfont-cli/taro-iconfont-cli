@@ -1,5 +1,5 @@
 # 3.2.0
-[feat] 增加style属性
+[feat] 增加style属性，导出Icon名称类型提示
 
 # 3.1.2
 [fix] 修复eslint可能会报错的问题
