@@ -9,12 +9,14 @@ interface Props {
   name: 'alipay' | 'user' | 'setup';
   size?: number;
   color?: string | string[];
+  style?: React.CSSProperties;
 }
 
 const IconFont: FunctionComponent<Props> = (props) => {
-  const { name, size, color } = props;
+  const { name, size, color, style } = props;
 
-  return <Icon name={name} size={size} color={color} />;
+  // @ts-ignore
+  return <Icon name={name} size={size} color={color} style={style} />;
 };
 
 IconFont.defaultProps = {

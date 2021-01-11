@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { FunctionComponent } from 'react';
 
-export interface Props {
+interface Props {
   name: '#names#';
   size?: number;
   color?: string | string[];

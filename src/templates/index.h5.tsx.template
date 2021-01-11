@@ -5,7 +5,7 @@ import React, { FunctionComponent } from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './h5';
 
-export interface Props {
+interface Props {
   name: '#names#';
   size?: number;
   color?: string | string[];

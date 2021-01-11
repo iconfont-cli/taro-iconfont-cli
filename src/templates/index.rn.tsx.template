@@ -5,7 +5,7 @@ import React, { FunctionComponent } from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './rn';
 
-export interface Props {
+interface Props {
   name: '#names#';
   size?: number;
   color?: string | string[];
@@ -15,6 +15,7 @@ export interface Props {
 const IconFont: FunctionComponent<Props> = (props) => {
   const { name, size, color, style } = props;
 
+  // @ts-ignore
   return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} style={style} />;
 };
 

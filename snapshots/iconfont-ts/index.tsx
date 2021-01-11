@@ -3,13 +3,16 @@
 
 import React, { FunctionComponent } from 'react';
 
-interface Props {
-  name: 'alipay' | 'user' | 'setup';
+export type IconNames = 'alipay' | 'user' | 'setup';
+
+export interface IconProps {
+  name: IconNames;
   size?: number;
   color?: string | string[];
+  style?: React.CSSProperties;
 }
 
-const IconFont: FunctionComponent<Props> = () => {
+const IconFont: FunctionComponent<IconProps> = () => {
   return null;
 };
 
