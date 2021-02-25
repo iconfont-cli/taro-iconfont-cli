@@ -1,3 +1,6 @@
+# 3.2.1
+[fix] ts项目导出IconNames可能报错的问题 #50
+
 # 3.2.0
 [feat] 增加style属性，导出Icon名称类型提示
 
