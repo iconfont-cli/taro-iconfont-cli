@@ -4,8 +4,10 @@
 import React, { FunctionComponent } from 'react';
 
 
+export type IconNames = 'alipay' | 'user' | 'setup';
+
 interface Props {
-  name: 'alipay' | 'user' | 'setup';
+  name: IconNames;
   size?: number;
   color?: string | string[];
   style?: React.CSSProperties;

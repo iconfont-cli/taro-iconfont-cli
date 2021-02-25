@@ -5,8 +5,10 @@ import React, { FunctionComponent } from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './rn';
 
+export type IconNames = '#names#';
+
 interface Props {
-  name: '#names#';
+  name: IconNames;
   size?: number;
   color?: string | string[];
   style?: React.CSSProperties;
