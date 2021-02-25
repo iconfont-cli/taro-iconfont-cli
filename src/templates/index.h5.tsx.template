@@ -4,9 +4,10 @@
 import React, { FunctionComponent } from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 import Icon from './h5';
+import { IconNames } from './index';
 
 interface Props {
-  name: '#names#';
+  name: IconNames;
   size?: number;
   color?: string | string[];
   style?: React.CSSProperties;
@@ -21,5 +22,5 @@ const IconFont: FunctionComponent<Props> = (props) => {
 IconFont.defaultProps = {
   size: #size#,
 };
-
+export { IconNames }
 export default IconFont;
