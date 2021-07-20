@@ -47,7 +47,7 @@ npx iconfont-init
 ```json
 {
   "symbol_url": "请参考README.md，复制 http://iconfont.cn 官网提供的JS链接",
-  "save_dir": "./iconfont",
+  "save_dir": "./src/components/iconfont",
   "use_typescript": false,
   "platforms": "*",
   "use_rpx": true,
@@ -126,7 +126,7 @@ export default {
 在Page中使用图标
 ```jsx harmony
 import React, { Component } from 'react';
-import IconFont from '../iconfont';
+import IconFont from '../components/iconfont';
 
 class App extends Component {
   render() {
