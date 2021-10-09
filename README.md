@@ -165,15 +165,6 @@ export default App;
 npx iconfont-taro
 ```
 
-# 扩展
-|平台|库|
-|----|---|
-|小程序|[mini-program-iconfont-cli](https://github.com/fwh1990/mini-program-iconfont-cli)|
-|React Native|[react-native-iconfont-cli](https://github.com/fwh1990/react-native-iconfont-cli)|
-|React H5|[react-iconfont-cli](https://github.com/fwh1990/react-iconfont-cli)|
-|Flutter|[flutter-iconfont-cli](https://github.com/fwh1990/flutter-iconfont-cli)|
-
-
 --------
 
 欢迎使用，并给我一些反馈和建议，让这个库做的更好
