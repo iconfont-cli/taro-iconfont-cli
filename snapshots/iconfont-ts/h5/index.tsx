@@ -1,19 +1,20 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import React, { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
+import React, { SVGAttributes, FunctionComponent } from 'react';
 import IconAlipay from './IconAlipay';
 import IconUser from './IconUser';
 import IconSetup from './IconSetup';
+export { default as IconAlipay } from './IconAlipay';
+export { default as IconUser } from './IconUser';
+export { default as IconSetup } from './IconSetup';
 
 export type IconNames = 'alipay' | 'user' | 'setup';
 
-interface Props extends DOMAttributes<SVGElement> {
+interface Props extends Omit<SVGAttributes<SVGElement>, 'color'> {
   name: IconNames;
   size?: number;
   color?: string | string[];
-  style?: CSSProperties;
-  className?: string;
 }
 
 const IconFont: FunctionComponent<Props> = ({ name, ...rest }) => {

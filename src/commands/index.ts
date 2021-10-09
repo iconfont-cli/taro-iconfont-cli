@@ -66,8 +66,9 @@ fetchXml(config.symbol_url).then((result) => {
       execFile = execFile.replace(/mini-program-iconfont-cli/, miniProgramDir);
       require(execFile)[execMethod](result, filterMiniProgramConfig(config, platform));
     } else if (execFile.indexOf('react-native-iconfont-cli') >= 0) {
+      const localSvg = [];
       execFile = execFile.replace(/react-native-iconfont-cli/, reactNativeDir);
-      require(execFile)[execMethod](result, filterReactNativeConfig(config, platform));
+      require(execFile)[execMethod](result, localSvg, filterReactNativeConfig(config, platform));
 
       // Remove .d.ts files
       glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((rnFilePath) => {

@@ -11,7 +11,7 @@ interface Props extends GProps, ViewProps {
   color?: string | string[];
 }
 
-const IconAlipay: FunctionComponent<Props> = ({ size, color, ...rest }) => {
+let IconAlipay: FunctionComponent<Props> = ({ size, color, ...rest }) => {
   return (
     <Svg viewBox="0 0 1024 1024" width={size} height={size} {...rest}>
       <Path
@@ -29,5 +29,7 @@ const IconAlipay: FunctionComponent<Props> = ({ size, color, ...rest }) => {
 IconAlipay.defaultProps = {
   size: 20,
 };
+
+IconAlipay = React.memo ? React.memo(IconAlipay) : IconAlipay;
 
 export default IconAlipay;

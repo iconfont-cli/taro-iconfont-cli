@@ -1,14 +1,12 @@
 /* tslint:disable */
 /* eslint-disable */
 
-import React, { CSSProperties, DOMAttributes, FunctionComponent } from 'react';
+import React, { CSSProperties, SVGAttributes, FunctionComponent } from 'react';
 import { getIconColor } from './helper';
 
-interface Props extends DOMAttributes<SVGElement> {
+interface Props extends Omit<SVGAttributes<SVGElement>, 'color'> {
   size?: number;
   color?: string | string[];
-  style?: CSSProperties;
-  className?: string;
 }
 
 const DEFAULT_STYLE: CSSProperties = {
