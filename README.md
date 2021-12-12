@@ -20,6 +20,8 @@
 4、支持自定义颜色
 <br>
 5、支持es6和typescript两种模式
+<br>
+6、支持vue/react（v3.3.0版本以上）
 
 # Step 1
 安装插件
@@ -49,6 +51,7 @@ npx iconfont-init
   "symbol_url": "请参考README.md，复制 http://iconfont.cn 官网提供的JS链接",
   "save_dir": "./src/components/iconfont",
   "use_typescript": false,
+  "lang":"react",
   "platforms": "*",
   "use_rpx": true,
   "trim_icon_prefix": "icon",
@@ -71,6 +74,17 @@ npx iconfont-init
 如果您的项目使用Typescript编写，请设置为true。这个选项将决定生成的图标组件是`.tsx`还是`.js`后缀。
 
 当该值为false时，我们会为您的图标生成`.js`和`.d.ts`两个文件，以便您能享受到最好的开发体验。
+
+### lang
+`v3.3.0`以上版本支持Vue，React。如果您的项目使用Vue编写，请设置为"Vue"。这个选项将决定生成的图标组件是`.jsx/.tsx`还是`.vue`组件。
+
+```json5
+{
+  // 选择你需要的语言
+  // 说明 =>  react: React | vue: Vue
+  "lang": "react" 或 "vue",
+}
+```
 
 ### platforms
 选择需要支持的平台，默认是`*`，意味着所有平台都需要支持（如果有）。如果你只想支持部分平台，也可以设置成数组：
@@ -124,6 +138,9 @@ export default {
 
 # 使用
 在Page中使用图标
+
+React：
+
 ```jsx harmony
 import React, { Component } from 'react';
 import IconFont from '../components/iconfont';
@@ -136,7 +153,20 @@ class App extends Component {
 
 export default App;
 ```
+Vue：
+```vue
+<template>
+	<iconfont name="alipay"></iconfont>
+</template>
+
+<script lang="ts" setup>
+	import Iconfont from "@/components/iconfont/Index.vue";
+</script>
+
+```
+
 更多用法：
+
 ```jsx harmony
 // 原色彩
 <IconFont name="alipay" />
