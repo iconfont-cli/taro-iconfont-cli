@@ -16,6 +16,7 @@ const basePath = path.join(__dirname, '..');
 const miniProgramBasePath = 'node_modules/mini-program-iconfont-cli';
 const reactNativeBasePath = 'node_modules/react-native-iconfont-cli';
 const reactWebBasePath = 'node_modules/react-iconfont-cli';
+const vueWebBasePath = 'node_modules/vue-iconfonts-cli';
 const miniProgramDir = fs.existsSync(path.join(basePath, miniProgramBasePath))
   ? path.join(basePath, miniProgramBasePath)
   : path.resolve(miniProgramBasePath);
@@ -25,9 +26,13 @@ const reactNativeDir = fs.existsSync(path.join(basePath, reactNativeBasePath))
 const reactWebDir = fs.existsSync(path.join(basePath, reactWebBasePath))
   ? path.join(basePath, reactWebBasePath)
   : path.resolve(reactWebBasePath);
+const vueWebDir = fs.existsSync(path.join(basePath, vueWebBasePath))
+  ? path.join(basePath, vueWebBasePath)
+  : path.resolve(vueWebBasePath);
 
 const config = getConfig();
 
+const isVue = config.lang === 'vue';
 fetchXml(config.symbol_url).then((result) => {
   if (!config.platforms.length) {
     console.warn(`\nPlatform is required.\n`);
@@ -75,7 +80,12 @@ fetchXml(config.symbol_url).then((result) => {
         fs.unlinkSync(rnFilePath);
       });
     } else {
-      execFile = execFile.replace(/react-iconfont-cli/, reactWebDir);
+      let langReg = /react-iconfont-cli/;
+      if (isVue) {
+        execFile = 'vue-iconfonts-cli/libs/generateComponent';
+        langReg = /vue-iconfonts-cli/;
+      }
+      execFile = execFile.replace(langReg, isVue ? vueWebDir : reactWebDir);
       require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
 
       // Remove .d.ts files

@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": ["esnext"],
+    "lib": ["esnext", "es2021.String"],
     "allowJs": false,
     "declaration": true,
     "removeComments": false,
@@ -30,8 +30,5 @@
     "resolveJsonModule": true,
     "skipLibCheck": true
   },
-  "exclude": [
-    "./snapshots/",
-    "./build/"
-  ]
+  "exclude": ["./snapshots/", "./build/"]
 }
