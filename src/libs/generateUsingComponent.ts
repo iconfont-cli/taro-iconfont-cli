@@ -56,6 +56,7 @@ export const generateUsingComponent = (config: Config, names: string[], platform
 
   if (platform === "h5-vue") {
     platform = "h5";
+    fs.writeFileSync(path.join(saveDir, "shims.d.ts"), getTemplate('shims.d.ts'));
   }
 
   fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${platform}` : '') + jsxExtension), iconFile);
