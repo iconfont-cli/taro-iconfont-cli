@@ -54,5 +54,9 @@ export const generateUsingComponent = (config: Config, names: string[], platform
   fs.writeFileSync(path.join(saveDir, 'helper.js'), helperFile);
   fs.writeFileSync(path.join(saveDir, 'helper.d.ts'), getTemplate('helper.d.ts'));
 
+  if (platform === "h5-vue") {
+    platform = "h5";
+  }
+
   fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${platform}` : '') + jsxExtension), iconFile);
 };

@@ -8,7 +8,7 @@ import mkdirp from 'mkdirp';
 import { getConfig } from '../libs/getConfig';
 import { fetchXml } from 'iconfont-parser';
 import { PLATFORM_MAP } from '../libs/maps';
-import { filterMiniProgramConfig, filterReactNativeConfig, filterReactWebConfig } from '../libs/filterConfig';
+import { filterMiniProgramConfig, filterReactNativeConfig, filterH5WebConfig } from '../libs/filterConfig';
 import { generateUsingComponent } from '../libs/generateUsingComponent';
 import { getIconNames } from '../libs/getIconNames';
 
@@ -86,12 +86,16 @@ fetchXml(config.symbol_url).then((result) => {
         langReg = /vue-iconfonts-cli/;
       }
       execFile = execFile.replace(langReg, isVue ? vueWebDir : reactWebDir);
-      require(execFile)[execMethod](result, filterReactWebConfig(config, platform));
+      require(execFile)[execMethod](result, filterH5WebConfig(config, platform));
 
       // Remove .d.ts files
       glob.sync(path.resolve(config.save_dir, platform, '*.d.ts')).map((h5FilePath) => {
         fs.unlinkSync(h5FilePath);
       });
+    }
+
+    if (platform === 'h5' && isVue) {
+      platform = 'h5-vue';
     }
 
     generateUsingComponent(config, iconNames, platform);
