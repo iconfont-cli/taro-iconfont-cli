@@ -32,7 +32,7 @@ const vueWebDir = fs.existsSync(path.join(basePath, vueWebBasePath))
 
 const config = getConfig();
 
-const isVue = config.lang === 'vue';
+const isVue = config.lang === 'vue' && !config.use_typescript;
 fetchXml(config.symbol_url).then((result) => {
   if (!config.platforms.length) {
     console.warn(`\nPlatform is required.\n`);
