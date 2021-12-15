@@ -94,8 +94,8 @@ fetchXml(config.symbol_url).then((result) => {
       });
     }
 
-    if (platform === 'h5' && isVue) {
-      platform = 'h5-vue';
+    if (platform && isVue) {
+      platform = platform + '-vue';
     }
 
     generateUsingComponent(config, iconNames, platform);

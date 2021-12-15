@@ -1,0 +1,3 @@
+import Icon from "./h5/Index.vue";
+
+export default Icon;
