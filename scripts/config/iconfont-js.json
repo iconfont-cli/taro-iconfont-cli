@@ -2,6 +2,7 @@
   "symbol_url": "http://at.alicdn.com/t/font_1373348_ghk94ooopqr.js",
   "use_typescript": false,
   "platforms": "*",
+  "lang": "react",
   "use_rpx": true,
   "design_width": 720,
   "save_dir": "./snapshots/iconfont-js",

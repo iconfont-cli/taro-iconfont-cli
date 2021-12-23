@@ -21,7 +21,7 @@ export const generateUsingComponent = (config: Config, names: string[], platform
     if (fs.existsSync(path.join(__dirname, '../templates/index.' + platform + jsxExtension + '.template'))) {
       iconFile = getTemplate('index.' + platform + jsxExtension);
     } else {
-      iconFile = getTemplate('index.platform' + jsxExtension);
+      iconFile = getTemplate(`index.platform${(platform && platform.includes("-vue")) ? "-vue" : ""}` + jsxExtension);
     }
   } else {
     iconFile = getTemplate('index' + jsxExtension);
@@ -30,7 +30,7 @@ export const generateUsingComponent = (config: Config, names: string[], platform
   iconFile = replaceNames(iconFile, names);
   iconFile = replaceSize(iconFile, config.default_icon_size);
 
-  if(platform === 'h5' && config.use_rpx) {
+  if (platform === 'h5' && config.use_rpx) {
     let designWidth = config.design_width || 750
     iconFile = replaceDesignWidth(iconFile, designWidth);
   }
@@ -53,6 +53,11 @@ export const generateUsingComponent = (config: Config, names: string[], platform
   helperFile = replaceRelativePath(helperFile, config.save_dir);
   fs.writeFileSync(path.join(saveDir, 'helper.js'), helperFile);
   fs.writeFileSync(path.join(saveDir, 'helper.d.ts'), getTemplate('helper.d.ts'));
+
+  if (platform && platform.includes("-vue")) {
+    platform = platform.replace(/-vue/, "");
+    fs.writeFileSync(path.join(saveDir, "shims.d.ts"), getTemplate('shims.d.ts'));
+  }
 
   fs.writeFileSync(path.join(saveDir, 'index' + (platform ? `.${platform}` : '') + jsxExtension), iconFile);
 };

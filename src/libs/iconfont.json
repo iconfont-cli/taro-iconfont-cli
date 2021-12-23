@@ -3,6 +3,7 @@
   "save_dir": "./src/components/iconfont",
   "use_typescript": false,
   "platforms": "*",
+  "lang": "vue",
   "use_rpx": true,
   "trim_icon_prefix": "icon",
   "default_icon_size": 18,

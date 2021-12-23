@@ -27,6 +27,6 @@ export const replaceRelativePath = (content: string, saveDir: string) => {
   const relativePath = path
     .relative(path.resolve('src'), path.resolve(saveDir))
     // To resolve the path separator on windows
-    .replace('\\', '/');
+    .replace(/\\/g, '/');
   return content.replace(/#relativePath#/g, relativePath);
 };

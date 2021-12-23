@@ -21,7 +21,7 @@ export const filterReactNativeConfig = (config: Config, platform: string) => {
   };
 };
 
-export const filterReactWebConfig = (config: Config, platform: string) => {
+export const filterH5WebConfig = (config: Config, platform: string) => {
   return {
     symbol_url: config.symbol_url,
     use_typescript: config.use_typescript,

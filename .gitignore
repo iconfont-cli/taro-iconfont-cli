@@ -1,6 +1,11 @@
 node_modules/
 *.log
-.idea/
 build/
 /iconfont.json
+
+# macOS
 .DS_Store
+
+# IDE
+.idea/
+.vscode/launch.json

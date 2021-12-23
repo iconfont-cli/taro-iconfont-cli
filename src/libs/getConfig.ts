@@ -10,6 +10,7 @@ export interface Config {
   save_dir: string;
   use_typescript: boolean;
   platforms: string[];
+  lang?: "vue" | "react";
   use_rpx: boolean;
   design_width: string | number;
   trim_icon_prefix: string;
