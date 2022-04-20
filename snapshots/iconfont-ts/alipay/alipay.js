@@ -27,7 +27,7 @@ Component({
       });
     }
   },
-  disUpdate(prevProps) {
+  didUpdate(prevProps) {
     const size = this.props.size;
     const color = this.props.color;
 
@@ -45,7 +45,7 @@ Component({
     }
   },
   methods: {
-    fixColor: function() {
+    fixColor: function () {
       var color = this.props.color;
       var hex2rgb = this.hex2rgb;
 
@@ -57,7 +57,7 @@ Component({
         return item.indexOf('#') === 0 ? hex2rgb(item) : item;
       });
     },
-    hex2rgb: function(hex) {
+    hex2rgb: function (hex) {
       var rgb = [];
 
       hex = hex.substr(1);
@@ -66,7 +66,7 @@ Component({
         hex = hex.replace(/(.)/g, '$1$1');
       }
 
-      hex.replace(/../g, function(color) {
+      hex.replace(/../g, function (color) {
         rgb.push(parseInt(color, 0x10));
         return color;
       });
