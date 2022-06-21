@@ -47,6 +47,7 @@ npx iconfont-init
 ```json
 {
   "symbol_url": "请参考README.md，复制 http://iconfont.cn 官网提供的JS链接",
+  "local_svgs": "使用本地文件夹的svg图标生成，symbol_url设置为空",
   "save_dir": "./src/components/iconfont",
   "use_typescript": false,
   "platforms": "*",
@@ -63,6 +64,10 @@ npx iconfont-init
 <br />
 
 ![](https://github.com/fwh1990/mini-program-iconfont-cli/blob/master/images/symbol-url.png?raw=true)
+
+
+### local_svgs
+本地svg图标放置文件夹位置，直接使用本地图标生成组件
 
 ### save_dir
 根据iconfont图标生成的组件存放的位置。每次生成组件之前，该文件夹都会被清空。

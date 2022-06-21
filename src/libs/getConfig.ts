@@ -14,6 +14,7 @@ export interface Config {
   design_width: string | number;
   trim_icon_prefix: string;
   default_icon_size: number;
+  local_svgs?: string;
 }
 
 let cacheConfig: Config;
@@ -39,8 +40,8 @@ export const getConfig = (argv?: string[]) => {
 
   const config = require(targetFile) as Config;
 
-  if (!config.symbol_url || !/^(https?:)?\/\//.test(config.symbol_url)) {
-    console.warn(colors.red('You are required to provide symbol_url'));
+  if ((!config.symbol_url || !/^(https?:)?\/\//.test(config.symbol_url)) && !config.local_svgs) {
+    console.warn(colors.red('You are required to provide symbol_url or local_svgs'));
     process.exit(1);
   }
 
