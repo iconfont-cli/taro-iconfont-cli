@@ -1,7 +1,7 @@
 /* eslint-disable */
 
-const IconFont = () => {
+const Iconfont = () => {
   return null;
 };
 
-export default IconFont;
+export default Iconfont;

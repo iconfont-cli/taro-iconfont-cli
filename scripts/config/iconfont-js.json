@@ -6,5 +6,6 @@
   "design_width": 720,
   "save_dir": "./snapshots/iconfont-js",
   "trim_icon_prefix": "icon",
-  "default_icon_size": 14
+  "default_icon_size": 14,
+  "component_name": "iconfont"
 }

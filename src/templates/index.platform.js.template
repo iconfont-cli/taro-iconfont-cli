@@ -3,14 +3,14 @@
 import React from 'react';
 #rpx-1:import Taro from '@tarojs/taro';:#
 
-const IconFont = (props) => {
+const #ComponentName# = (props) => {
   const { name, size, color, style } = props;
 
-  return <iconfont name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} style={style} />;
+  return <#component-name# name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} style={style} />;
 };
 
-IconFont.defaultProps = {
+#ComponentName#.defaultProps = {
   size: #size#,
 };
 
-export default IconFont;
+export default #ComponentName#;

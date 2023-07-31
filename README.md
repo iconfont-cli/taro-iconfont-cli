@@ -53,7 +53,8 @@ npx iconfont-init
   "use_rpx": true,
   "trim_icon_prefix": "icon",
   "default_icon_size": 18,
-  "design_width": 750
+  "design_width": 750,
+  "component_name": "iconfont"
 }
 ```
 ### 配置参数说明：
@@ -93,6 +94,9 @@ npx iconfont-init
 
 ### default_icon_size
 我们将为每个生成的图标组件加入默认的字体大小，当然，你也可以通过传入props的方式改变这个size值。
+
+### component_name
+生成的组件名称，用于注册小程序的组件，所以该项只有在小程序平台下才会生效。此项能满足一个项目中引入多个 iconfont 组件。
 
 
 # Step 3

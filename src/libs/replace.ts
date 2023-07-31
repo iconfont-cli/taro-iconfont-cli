@@ -30,3 +30,11 @@ export const replaceRelativePath = (content: string, saveDir: string) => {
     .replace('\\', '/');
   return content.replace(/#relativePath#/g, relativePath);
 };
+
+export const replaceComponentName = (content: string, componentName: string) => {
+  return content.replace(/#component-name#/g, componentName);
+};
+
+export const replaceComponentNameCamelCase = (content: string, componentName: string) => {
+  return content.replace(/#ComponentName#/g, componentName);
+};
