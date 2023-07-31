@@ -14,15 +14,15 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-const IconFont: FunctionComponent<Props> = (props) => {
+const #ComponentName#: FunctionComponent<Props> = (props) => {
   const { name, size, color, style } = props;
 
   // @ts-ignore
   return <Icon name={name} size={#rpx-1:parseFloat(Taro.pxTransform(size)):##rpx-0:size:#} color={color} style={style} />;
 };
 
-IconFont.defaultProps = {
+#ComponentName#.defaultProps = {
   size: #size#,
 };
 
-export default IconFont;
+export default #ComponentName#;

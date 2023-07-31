@@ -14,7 +14,9 @@
     "@tarojs/taro": "^3.0.8"
   },
   "dependencies": {
+    "camelcase": "^6.0.0",
     "colors": "^1.4.0",
+    "decamelize": "^5.0.0",
     "fs-extra": "^8.1.0",
     "iconfont-parser": "^1.0.0",
     "mini-program-iconfont-cli": "0.6.1",

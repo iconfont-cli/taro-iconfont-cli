@@ -12,8 +12,8 @@ export interface IconProps {
   style?: React.CSSProperties;
 }
 
-const IconFont: FunctionComponent<IconProps> = () => {
+const #ComponentName#: FunctionComponent<IconProps> = () => {
   return null;
 };
 
-export default IconFont;
+export default #ComponentName#;

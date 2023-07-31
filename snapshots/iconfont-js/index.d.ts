@@ -8,6 +8,6 @@ interface Props {
   style?: React.CSSProperties;
 }
 
-declare const IconFont: FunctionComponent<Props>;
+declare const Iconfont: FunctionComponent<Props>;
 
-export default IconFont;
+export default Iconfont;
